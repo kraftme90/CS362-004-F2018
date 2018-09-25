@@ -1,1 +1,1 @@
-Name: Artem Slivka, ONID: slivkaa
+This is my assignment-1 submission!
