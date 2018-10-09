@@ -811,15 +811,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 		
     case smithy:
-      //+3 Cards
-      for (i = 0; i < 3; i++)
-	{
-	  drawCard(currentPlayer, state);
-	}
-			
-      //discard card from hand
-      discardCard(handPos, currentPlayer, state, 0);
-      return 0;
+    	getSmithy(state, currentPlayer, handPos);
 		
     case village:
       //+1 Card
@@ -1172,34 +1164,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 		
     case treasure_map:
-      //search hand for another treasure_map
-      index = -1;
-      for (i = 0; i < state->handCount[currentPlayer]; i++)
-	{
-	  if (state->hand[currentPlayer][i] == treasure_map && i != handPos)
-	    {
-	      index = i;
-	      break;
-	    }
-	}
-      if (index > -1)
-	{
-	  //trash both treasure cards
-	  discardCard(handPos, currentPlayer, state, 1);
-	  discardCard(index, currentPlayer, state, 1);
-
-	  //gain 4 Gold cards
-	  for (i = 0; i < 4; i++)
-	    {
-	      gainCard(gold, state, 1, currentPlayer);
-	    }
-				
-	  //return success
-	  return 1;
-	}
-			
-      //no second treasure_map found in hand
-      return -1;
+    	getTreasureMap(index, state, currentPlayer, handPos);
     }
 	
   return -1;
@@ -1332,6 +1297,43 @@ int getAdventurer(int drawntreasure, struct gameState *state, int currentPlayer,
 	return 0;
 }
 
+int getSmithy(struct gameState *state, int currentPlayer, int handPos){
+    //+3 Cards
+    for (i = 0; i < 3; i++){
+	  drawCard(currentPlayer, state);
+	}
+			
+    //discard card from hand
+    discardCard(handPos, currentPlayer, state, 0);
+    return 0;
+}
+
+int getTreasureMap(int index, struct gameState *state, int currentPlayer, int handPos){
+    //search hand for another treasure_map
+    index = -1;
+    for (i = 0; i < state->handCount[currentPlayer]; i++){
+  	  if (state->hand[currentPlayer][i] == treasure_map && i != handPos){
+  		  index = i;
+  		  break;
+  	  }
+    }
+    if (index > -1){
+  	  //trash both treasure cards
+  	  discardCard(handPos, currentPlayer, state, 1);
+  	  discardCard(index, currentPlayer, state, 1);
+
+  	  //gain 4 Gold cards
+  	  for (i = 0; i < 4; i++){
+  		  gainCard(gold, state, 1, currentPlayer);
+  	  }
+				
+  	  //return success
+  	  return 1;
+    }
+			
+    //no second treasure_map found in hand
+    return -1;
+}
 
 //end of dominion.c
 
