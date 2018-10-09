@@ -649,15 +649,15 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
   int j;
   int k;
   int x;
-  int index;
+  //int index;
   int currentPlayer = whoseTurn(state);
   int nextPlayer = currentPlayer + 1;
 
   int tributeRevealedCards[2] = {-1, -1};
   int temphand[MAX_HAND];// moved above the if statement
   int drawntreasure=0;
-  int cardDrawn;
-  int z = 0;// this is the counter for the temp hand
+  //int cardDrawn;
+  //int z = 0;// this is the counter for the temp hand
   if (nextPlayer > (state->numPlayers - 1)){
     nextPlayer = 0;
   }
@@ -1151,7 +1151,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 		
     case treasure_map:
-    	getTreasureMap(index, state, currentPlayer, handPos);
+    	getTreasureMap(state, currentPlayer, handPos);
     }
 	
   return -1;
@@ -1263,6 +1263,7 @@ int updateCoins(int player, struct gameState *state, int bonus)
 }
 
 int getAdventurer(int drawntreasure, struct gameState *state, int currentPlayer, int *temphand){
+	int z=0, cardDrawn;
 	while(drawntreasure<2){
 		if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
 		  shuffle(currentPlayer, state);
@@ -1270,15 +1271,16 @@ int getAdventurer(int drawntreasure, struct gameState *state, int currentPlayer,
 		drawCard(currentPlayer, state);
 		cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
 		if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
-		  drawntreasure++;
+		  ++drawntreasure;  // BUG: incrementing drawn treasure before drawing, should be incremented after
 		else{
 		  temphand[z]=cardDrawn;
 		  state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
-		  z++;
+		  z++; // NOT A BUG: incrementing z before returning to the loop; can be incremented after, but does not affect the loop
 		}
 	}
 	while(z-1>=0){
-		state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
+		// discard all cards in play that have been drawn
+		state->discard[currentPlayer][++state->discardCount[currentPlayer]]=temphand[z-1]; // BUG: incrementing discard count before discarding, should be incremented after
 		z=z-1;
 	}
 	return 0;
@@ -1286,7 +1288,7 @@ int getAdventurer(int drawntreasure, struct gameState *state, int currentPlayer,
 
 int getSmithy(struct gameState *state, int currentPlayer, int handPos){
     //+3 Cards
-    for (i = 0; i < 3; i++){
+    for (int i = 1; i < 3; i++){       // BUG: incorrect loop count, should be i = 0; i < 3; i++
 	  drawCard(currentPlayer, state);
 	}
 			
@@ -1307,7 +1309,7 @@ int getSalvager(int choice1, struct gameState *state, int currentPlayer, int han
 		//gain coins equal to trashed card
 		state->coins = state->coins + getCost( handCard(choice1, state) );
 		//trash card
-		discardCard(choice1, currentPlayer, state, 1);	
+		discardCard(choice1, currentPlayer, state, 0);  // BUG: incorrent trash flag, should be 1, not 0	
 	}
 				
 	//discard card
@@ -1315,10 +1317,10 @@ int getSalvager(int choice1, struct gameState *state, int currentPlayer, int han
 	return 0;
 }
 
-int getTreasureMap(int index, struct gameState *state, int currentPlayer, int handPos){
+int getTreasureMap(struct gameState *state, int currentPlayer, int handPos){
     //search hand for another treasure_map
-    index = -1;
-    for (i = 0; i < state->handCount[currentPlayer]; i++){
+    int index = -1;
+    for (int i = 0; i < state->handCount[currentPlayer]; i++){
   	  if (state->hand[currentPlayer][i] == treasure_map && i != handPos){
   		  index = i;
   		  break;
@@ -1330,7 +1332,7 @@ int getTreasureMap(int index, struct gameState *state, int currentPlayer, int ha
   	  discardCard(index, currentPlayer, state, 1);
 
   	  //gain 4 Gold cards
-  	  for (i = 0; i < 4; i++){
+  	  for (int i = 0; i < 4; i++){
   		  gainCard(gold, state, 1, currentPlayer);
   	  }
 				
@@ -1339,7 +1341,7 @@ int getTreasureMap(int index, struct gameState *state, int currentPlayer, int ha
     }
 			
     //no second treasure_map found in hand
-    return -1;
+    return 1;    // BUG: incorrect return number; should be -1
 }
 
 //end of dominion.c
