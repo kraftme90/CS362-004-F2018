@@ -1271,11 +1271,11 @@ int getAdventurer(int drawntreasure, struct gameState *state, int currentPlayer,
 		drawCard(currentPlayer, state);
 		cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
 		if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
-		  ++drawntreasure;  // BUG: incrementing drawn treasure before drawing, should be incremented after
+		  ++drawntreasure;  // NOT A BUG: incrementing drawntreasure online rather than after line
 		else{
 		  temphand[z]=cardDrawn;
 		  state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
-		  z++; // NOT A BUG: incrementing z before returning to the loop; can be incremented after, but does not affect the loop
+		  ++z; // NOT A BUG: incrementing z before returning to the loop; can be incremented after, but does not affect the loop
 		}
 	}
 	while(z-1>=0){
