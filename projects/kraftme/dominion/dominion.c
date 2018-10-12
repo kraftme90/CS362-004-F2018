@@ -1261,16 +1261,16 @@ int getAdventurer(struct gameState *state, int currentPlayer, int *temphand){
 	    drawCard(currentPlayer, state);
 	    cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
 	    if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
-	    	++drawntreasure; // NOT A BUG: orginally incremented after variable
+	    	drawntreasure++;
 	    else{
+	    	z++;  // BUG: incorrectly increments z count before saving cardDrawn to the temphand, should be incremented at the end of the else block
 	    	temphand[z]=cardDrawn;
 	    	state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
-	    	++z;  // NOT A BUG: originally incremented after variable
 	    }
 	}
 	while(z-1>=0){
 		// Discard all cards in play that have been drawn
-		state->discard[currentPlayer][++state->discardCount[currentPlayer]]=temphand[z-1]; // BUG: discard count incremented before discarding, originally discarded after
+		state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1];
 	    z=z-1;
 	}
 	return 0;
@@ -1317,7 +1317,7 @@ int getSeaHag(struct gameState *state, int currentPlayer){
 
 int getTreasureMap(struct gameState *state, int currentPlayer, int handPos){
     //search hand for another treasure_map
-    int index = -1; // BUG: incorrect initialization value, should be -1
+    int index = -1;
     for (int i = 0; i < state->handCount[currentPlayer]; i++){
   	  if (state->hand[currentPlayer][i] == treasure_map && i != handPos){
   		  index = i;
@@ -1335,11 +1335,11 @@ int getTreasureMap(struct gameState *state, int currentPlayer, int handPos){
   	  }
 				
   	  //return success
-  	  return 1; // BUG: incorrent return value, should be 1
+  	  return 1;
     }
 			
     //no second treasure_map found in hand
-    return -1;    // BUG: incorrect return number; should be -1
+    return -1;
 }
 
 //end of dominion.c
