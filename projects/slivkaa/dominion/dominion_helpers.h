@@ -12,4 +12,11 @@ int getCost(int cardNumber);
 int cardEffect(int card, int choice1, int choice2, int choice3, 
 	       struct gameState *state, int handPos, int *bonus);
 
+//New functions after refactoring
+void selectAdventurer(struct gameState *state, int drawntreasure, int z, int currentPlayer, int cardDrawn, int *temphand);
+void selectSmithy(struct gameState *state, int handPos, int currentPlayer);
+void selectSteward(struct gameState *state, int choice1, int choice2, int choice3, int handPos, int currentPlayer);
+void selectCouncilRoom(struct gameState *state, int handPos, int currentPlayer);
+void selectFeast(struct gameState *state, int choice1, int *temphand, int currentPlayer);
+
 #endif
