@@ -90,6 +90,7 @@ int main(){
     }
 
     // ----------- TEST 5: No state change should occur to the kingdom card piles --------------
+    actual = expected = 0;
     for (i = adventurer; i <= treasure_map; i++)       	//loop all cards
     {
         for (j = 0; j < 10; j++)           		//loop chosen cards
