@@ -63,7 +63,7 @@ int main(){
     expected = 2;
     int numTreasures = 0;
     for(i = 0; i < testG.handCount[thisPlayer]; i++){
-        card = testG.hand[currentPlayer][i];
+        card = testG.hand[thisPlayer][i];
         if(card == copper || card == silver || card == gold){
             numTreasures +=1;
         }
@@ -87,14 +87,14 @@ int main(){
             treasures +=1;
         }
     }
-    int expected = initG.handCount[thisPlayer] - treasures;
-    int actual = testG.discardCount[thisPlayer] - initG.discardCount[thisPlayer];
+    expected = initG.handCount[thisPlayer] - treasures;
+    actual = testG.discardCount[thisPlayer] - initG.discardCount[thisPlayer];
     if(expected == actual){
-        printf("TEST 2: PASS all non-treasure cards in player's hand were moved to discard pile (discarded count = %d, expected = %d)\n", actCount, expCount);
+        printf("TEST 2: PASS all non-treasure cards in player's hand were moved to discard pile (discarded count = %d, expected = %d)\n", actual, expected);
         numPasses++;
     }
     else{
-        printf("TEST 2: FAIL all non-treasure cards in player's hand were NOT moved to discard pile (discarded count = %d, expected = %d)\n", actCount, expCount);
+        printf("TEST 2: FAIL all non-treasure cards in player's hand were NOT moved to discard pile (discarded count = %d, expected = %d)\n", actual, expected);
     }
 
 
