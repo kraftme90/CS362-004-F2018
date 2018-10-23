@@ -99,10 +99,10 @@ void printGameState(struct gameState *state){
         printf("discardCount[%d]: %d", i, state->discardCount[i]); 
     }
 
-    printf("\nplayedCards\n");
-    for(i = 0; i < MAX_DECK; i++){
-        state->playedCards[i] = 0; 
-        printf("[%d]:%d ", i, state->playedCards[i]);      
-    } 
+    // printf("\nplayedCards\n");
+    // for(i = 0; i < MAX_DECK; i++){
+    //     state->playedCards[i] = 0; 
+    //     printf("[%d]:%d ", i, state->playedCards[i]);      
+    // } 
 }
 
