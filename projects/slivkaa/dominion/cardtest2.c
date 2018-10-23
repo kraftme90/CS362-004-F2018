@@ -75,8 +75,8 @@ int main(){
         numPasses++;
     }
     else{
-        printf("TEST 1: FAIL player 1 has >2 or <2 treasure cards in his hand (hand count = %d, expected = %d)\n", actual, expected);
-        printf("treasure count = %d, expected = %d)\n", actual, expected);
+        printf("TEST 1: FAIL player 1 doesn't have 2 treasure cards in his hand\n", actual, expected);
+        printf("treasure count = %d, expected = %d)\t", actual, expected);
         printf("hand count = %d, expected = %d)\n", testG.handCount[thisPlayer], expected);
     }
 
