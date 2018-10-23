@@ -54,9 +54,12 @@ int main(){
     memcpy(&testG, &initG, sizeof(struct gameState));
     //Playing card
     choice3 = thisPlayer;
+    print("Before playing card\n");
+    printGameState(&testG);
 	cardEffect(adventurer, choice1, choice2, choice3, &testG, handpos, &bonus);
+    print("After playing card\n");
+    printGameState(&testG);
 
-    printf("player 1 deck count: %d\n", initG.deckCount[thisPlayer]);
 	printf("----------------- Testing Card: %s ----------------\n", TESTCARD);
 	// ----------- TEST 1: player should have exactly 2 treasure cards in his deck --------------
     int numTreasures = 0;
