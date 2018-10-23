@@ -82,7 +82,7 @@ int main(){
     // int expCount = 2;
     int treasures = 0;
     for(i = 0; i < initG.handCount[thisPlayer]; i++){
-        card = initG.hand[currentPlayer][i];
+        card = initG.hand[thisPlayer][i];
         if(card == copper || card == silver || card == gold){
             treasures +=1;
         }
