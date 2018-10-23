@@ -132,7 +132,6 @@ int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
 
   ////////////////////////
   //supply intilization complete
-
   //set player decks
   for (i = 0; i < numPlayers; i++)
   {
