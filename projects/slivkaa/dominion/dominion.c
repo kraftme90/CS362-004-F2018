@@ -199,7 +199,6 @@ int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
 }
 
 int shuffle(int player, struct gameState *state) {
- 
 
   int newDeck[MAX_DECK];
   int newDeckPos = 0;
@@ -326,19 +325,19 @@ int fullDeckCount(int player, int card, struct gameState *state) {
   int count = 0;
 
   for (i = 0; i < state->deckCount[player]; i++)
-    {
-      if (state->deck[player][i] == card) count++;
-    }
+  {
+    if (state->deck[player][i] == card) count++;
+  }
 
   for (i = 0; i < state->handCount[player]; i++)
-    {
-      if (state->hand[player][i] == card) count++;
-    }
+  {
+    if (state->hand[player][i] == card) count++;
+  }
 
   for (i = 0; i < state->discardCount[player]; i++)
-    {
-      if (state->discard[player][i] == card) count++;
-    }
+  {
+    if (state->discard[player][i] == card) count++;
+  }
 
   return count;
 }
@@ -393,23 +392,23 @@ int isGameOver(struct gameState *state) {
 	
   //if stack of Province cards is empty, the game ends
   if (state->supplyCount[province] == 0)
-    {
-      return 1;
-    }
+  {
+    return 1;
+  }
 
   //if three supply pile are at 0, the game ends
   j = 0;
   for (i = 0; i < 25; i++)
+  {
+    if (state->supplyCount[i] == 0)
     {
-      if (state->supplyCount[i] == 0)
-	{
-	  j++;
-	}
+      j++;
     }
+  }
   if ( j >= 3)
-    {
-      return 1;
-    }
+  {
+    return 1;
+  }
 
   return 0;
 }
@@ -420,36 +419,36 @@ int scoreFor (int player, struct gameState *state) {
   int score = 0;
   //score from hand
   for (i = 0; i < state->handCount[player]; i++)
-    {
-      if (state->hand[player][i] == curse) { score = score - 1; };
-      if (state->hand[player][i] == estate) { score = score + 1; };
-      if (state->hand[player][i] == duchy) { score = score + 3; };
-      if (state->hand[player][i] == province) { score = score + 6; };
-      if (state->hand[player][i] == great_hall) { score = score + 1; };
-      if (state->hand[player][i] == gardens) { score = score + ( fullDeckCount(player, 0, state) / 10 ); };
-    }
+  {
+    if (state->hand[player][i] == curse) { score = score - 1; };
+    if (state->hand[player][i] == estate) { score = score + 1; };
+    if (state->hand[player][i] == duchy) { score = score + 3; };
+    if (state->hand[player][i] == province) { score = score + 6; };
+    if (state->hand[player][i] == great_hall) { score = score + 1; };
+    if (state->hand[player][i] == gardens) { score = score + ( fullDeckCount(player, 0, state) / 10 ); };
+  }
 
   //score from discard
   for (i = 0; i < state->discardCount[player]; i++)
-    {
-      if (state->discard[player][i] == curse) { score = score - 1; };
-      if (state->discard[player][i] == estate) { score = score + 1; };
-      if (state->discard[player][i] == duchy) { score = score + 3; };
-      if (state->discard[player][i] == province) { score = score + 6; };
-      if (state->discard[player][i] == great_hall) { score = score + 1; };
-      if (state->discard[player][i] == gardens) { score = score + ( fullDeckCount(player, 0, state) / 10 ); };
-    }
+  {
+    if (state->discard[player][i] == curse) { score = score - 1; };
+    if (state->discard[player][i] == estate) { score = score + 1; };
+    if (state->discard[player][i] == duchy) { score = score + 3; };
+    if (state->discard[player][i] == province) { score = score + 6; };
+    if (state->discard[player][i] == great_hall) { score = score + 1; };
+    if (state->discard[player][i] == gardens) { score = score + ( fullDeckCount(player, 0, state) / 10 ); };
+  }
 
   //score from deck
   for (i = 0; i < state->discardCount[player]; i++)
-    {
-      if (state->deck[player][i] == curse) { score = score - 1; };
-      if (state->deck[player][i] == estate) { score = score + 1; };
-      if (state->deck[player][i] == duchy) { score = score + 3; };
-      if (state->deck[player][i] == province) { score = score + 6; };
-      if (state->deck[player][i] == great_hall) { score = score + 1; };
-      if (state->deck[player][i] == gardens) { score = score + ( fullDeckCount(player, 0, state) / 10 ); };
-    }
+  {
+    if (state->deck[player][i] == curse) { score = score - 1; };
+    if (state->deck[player][i] == estate) { score = score + 1; };
+    if (state->deck[player][i] == duchy) { score = score + 3; };
+    if (state->deck[player][i] == province) { score = score + 6; };
+    if (state->deck[player][i] == great_hall) { score = score + 1; };
+    if (state->deck[player][i] == gardens) { score = score + ( fullDeckCount(player, 0, state) / 10 ); };
+  }
 
   return score;
 }
@@ -465,13 +464,13 @@ int getWinners(int players[MAX_PLAYERS], struct gameState *state) {
     {
       //set unused player scores to -9999
       if (i >= state->numPlayers)
-	{
-	  players[i] = -9999;
-	}
-      else
-	{
-	  players[i] = scoreFor (i, state);
-	}
+      {
+        players[i] = -9999;
+      }
+          else
+      {
+        players[i] = scoreFor (i, state);
+      }
     }
 
   //find highest score
@@ -479,51 +478,51 @@ int getWinners(int players[MAX_PLAYERS], struct gameState *state) {
   for (i = 0; i < MAX_PLAYERS; i++)
     {
       if (players[i] > players[j])
-	{
-	  j = i;
-	}
+      {
+        j = i;
+      }
     }
   highScore = players[j];
 
   //add 1 to players who had less turns
   currentPlayer = whoseTurn(state);
   for (i = 0; i < MAX_PLAYERS; i++)
+  {
+    if ( players[i] == highScore && i > currentPlayer )
     {
-      if ( players[i] == highScore && i > currentPlayer )
-	{
-	  players[i]++;
-	}
+      players[i]++;
     }
+  }
 
   //find new highest score
   j = 0;
   for (i = 0; i < MAX_PLAYERS; i++)
+  {
+    if ( players[i] > players[j] )
     {
-      if ( players[i] > players[j] )
-	{
-	  j = i;
-	}
+      j = i;
     }
+  }
   highScore = players[j];
 
   //set winners in array to 1 and rest to 0
   for (i = 0; i < MAX_PLAYERS; i++)
+  {
+    if ( players[i] == highScore )
     {
-      if ( players[i] == highScore )
-	{
-	  players[i] = 1;
-	}
-      else
-	{
-	  players[i] = 0;
-	}
+      players[i] = 1;
     }
+        else
+    {
+      players[i] = 0;
+    }
+  }
 
   return 0;
 }
 
-int drawCard(int player, struct gameState *state)
-{	int count;
+int drawCard(int player, struct gameState *state){	
+  int count;
   int deckCounter;
   if (state->deckCount[player] <= 0){//Deck is empty
     
