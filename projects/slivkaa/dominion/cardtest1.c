@@ -96,8 +96,8 @@ int main(){
         {
             if (k[j] == i)
             {
-                actual +=testG->supplyCount[i];
-                expected += initG->supplyCount[i];
+                actual +=testG.supplyCount[i];
+                expected += initG.supplyCount[i];
                 break;
             }
         }
