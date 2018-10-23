@@ -54,10 +54,10 @@ int main(){
     memcpy(&testG, &initG, sizeof(struct gameState));
     //Playing card
     choice3 = thisPlayer;
-    print("Before playing card\n");
+    printf("Before playing card\n");
     printGameState(&testG);
 	cardEffect(adventurer, choice1, choice2, choice3, &testG, handpos, &bonus);
-    print("After playing card\n");
+    printf("After playing card\n");
     printGameState(&testG);
 
 	printf("----------------- Testing Card: %s ----------------\n", TESTCARD);
