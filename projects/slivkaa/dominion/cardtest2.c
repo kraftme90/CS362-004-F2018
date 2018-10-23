@@ -59,8 +59,6 @@ int main(){
     printf("player 1 deck count: %d\n", initG.deckCount[thisPlayer]);
 	printf("----------------- Testing Card: %s ----------------\n", TESTCARD);
 	// ----------- TEST 1: player should have exactly 2 treasure cards in his deck --------------
-    actual = testG.handCount[thisPlayer];
-    expected = 2;
     int numTreasures = 0;
     for(i = 0; i < testG.handCount[thisPlayer]; i++){
         card = testG.hand[thisPlayer][i];
@@ -68,26 +66,28 @@ int main(){
             numTreasures +=1;
         }
     }
-    if( (actual == expected) && (numTreasures == expected) ){
+    actual = numTreasures;
+    expected = 2;
+    if( (actual == expected) && testG.handCount[thisPlayer] == 2){
         printf("TEST 1: PASS player 1 has 2 treasure cards in his hand (hand count = %d, expected = %d)\n", actual, expected);
         numPasses++;
     }
     else{
-        printf("TEST 1: FAIL player 1 doesn't have 2 treasure cards in his hand (hand count = %d, expected = %d)\n", actual, expected);
+        printf("TEST 1: FAIL player 1 has >2 or <2 treasure cards in his hand (hand count = %d, expected = %d)\n", actual, expected);
     }
 
 
     // ----------- TEST 2: All cards from hand pile (except treasure cards) should be moved to discard pile --------------
     // int actCount = testG.handCount[thisPlayer];
     // int expCount = 2;
-    int treasures = 0;
+    numTreasures = 0;
     for(i = 0; i < initG.handCount[thisPlayer]; i++){
         card = initG.hand[thisPlayer][i];
         if(card == copper || card == silver || card == gold){
-            treasures +=1;
+            numTreasures +=1;
         }
     }
-    expected = initG.handCount[thisPlayer] - treasures;
+    expected = initG.handCount[thisPlayer] - numTreasures;
     actual = testG.discardCount[thisPlayer] - initG.discardCount[thisPlayer];
     if(expected == actual){
         printf("TEST 2: PASS all non-treasure cards in player's hand were moved to discard pile (discarded count = %d, expected = %d)\n", actual, expected);
