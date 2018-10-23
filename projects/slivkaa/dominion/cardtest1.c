@@ -30,7 +30,6 @@ int main(){
     int shuffledCards = 0;
     int i, j, m;
     int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
-    //int remove1, remove2;
     int seed = 1000;
     int numPlayers = 2;
     int thisPlayer = 0;
@@ -44,11 +43,6 @@ int main(){
 	printf("----------------- Testing Card: %s ----------------\n", TESTCARD);
 	// ----------- TEST 1: player should receive exactly 3 cards --------------
     newCards = 3;
-    /*       deckCounter = state->deckCount[player];//Create holder for the deck count
-    state->hand[player][count] = state->deck[player][deckCounter - 1];//Add card to the hand
-    state->deckCount[player]--;
-    state->handCount[player]++;//Increment hand count
-     */
 	// copy the game state to a test case
 	memcpy(&testG, &initG, sizeof(struct gameState));
 	cardEffect(smithy, choice1, choice2, choice3, &testG, handpos, &bonus);
@@ -56,48 +50,72 @@ int main(){
     expected = initG.handCount[thisPlayer] + newCards;
     if(actual == expected){
         printf("TEST 1: PASS player 1 received exactly 3 cards (hand count = %d, expected = %d)\n", actual, expected);
+        numPasses++;
     }
     else{
         printf("TEST 1: FAIL current player didnt' receive exactly 3 cards (hand count = %d, expected = %d)\n", actual, expected);
     }
 
+	// ----------- TEST 2: player 1's card should come from his own deck --------------
     actual = testG.deckCount[thisPlayer];
     expected = initG.deckCount[thisPlayer] - newCards;
     if(actual == expected){
-        printf("TEST 2: PASS drawn 3 cards came from player's own deck (deck count = %d, expected = %d)\n", actual, expected);
+        printf("TEST 2: PASS drawn 3 cards came from player 1's own deck (deck count = %d, expected = %d)\n", actual, expected);
+        numPasses++;
     }
     else{
-        printf("TEST 2: FAIL drawn 3 cards didn't come from player's own deck (deck count = %d, expected = %d)\n", actual, expected);
+        printf("TEST 2: FAIL drawn 3 cards didn't come from player 1's own deck (deck count = %d, expected = %d)\n", actual, expected);
     }
 
+	// ----------- TEST 3: player 2's deck/hand shouldn't change --------------
     actual = testG.deckCount[thisPlayer+1] + testG.handCount[thisPlayer+1];
     expected = initG.deckCount[thisPlayer+1] + initG.handCount[thisPlayer+1];
     if(actual == expected){
         printf("TEST 3: PASS player 2's deck and hand count didn't change (deck+hand count = %d, expected = %d)\n", actual, expected);
+        numPasses++;
     }
     else{
         printf("TEST 3: FAIL player 2's deck and hand count didn't change (deck+hand count = %d, expected = %d)\n", actual, expected);
     }
 
-    
-    /* Test 1 */
-    // retVal = handCard(smithy, &states[0]);
-    // expVal = smithy;
-    // if(compareInts(expVal, retVal) == 0){
-    //     printf("handCard(): PASS smithy in hand when player 1 plays smithy\n");
-    //     numPasses++;
-    // }
-    // else{
-    //     printf("handCard(): FAIL smithy not in hand when player 1 plays smithy\n");
-    // }
+    // ----------- TEST 4: No state change should occur to the victory card piles --------------
+    actual = testG.supplyCount[estate] + testG.supplyCount[duchy] + testG.supplyCount[province];
+    expected = initG.supplyCount[estate] + initG.supplyCount[duchy] + initG.supplyCount[province];
+    if(actual == expected){
+        printf("TEST 4: PASS No state change occurred to the victory card piles (total V cards  = %d, expected = %d)\n", actual, expected);
+        numPasses++;
+    }
+    else{
+        printf("TEST 4: FAIL state change occured to the victory card piles (total V cards = %d, expected = %d)\n", actual, expected);
+    }
 
+    // ----------- TEST 5: No state change should occur to the kingdom card piles --------------
+    for (i = adventurer; i <= treasure_map; i++)       	//loop all cards
+    {
+        for (j = 0; j < 10; j++)           		//loop chosen cards
+        {
+            if (k[j] == i)
+            {
+                actual +=testG->supplyCount[i];
+                expected += initG->supplyCount[i];
+                break;
+            }
+        }
+    }
+    if(actual == expected){
+        printf("TEST 5: PASS No state change occurred to the kingdom card piles (total K cards  = %d, expected = %d)\n", actual, expected);
+        numPasses++;
+    }
+    else{
+        printf("TEST 5: FAIL state change occured to the kingdom card piles (total K cards = %d, expected = %d)\n", actual, expected);
+    }
 
-    // if(numPasses == 4){
-    //    printf("TEST SUCCESSFULLY COMPLETED\n");
-    // }
-    // else{
-    //     printf("TEST FAILED\n");
-    // }
+    if(numPasses == 5){
+       printf("TEST SUCCESSFULLY COMPLETED\n");
+    }
+    else{
+        printf("TEST FAILED\n");
+    }
 
    return 0;
 }
