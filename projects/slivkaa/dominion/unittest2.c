@@ -30,45 +30,42 @@ int main(){
 
     test5.whoseTurn = 0;
     test5.handCount[test5.whoseTurn] = 1;
-
-
-    printf("unittest2.c:\n");
-   
+  
     retVal = numHandCards(&test1);
     expVal = 1;
     if(compareInts(expVal, retVal) == 0){
-        printf("numHandCards(): PASS when player 0's handcount = 1\n");
+        printf("numHandCards(): PASS if player 0's handcount = 1\n");
     }
     else{
-        printf("numHandCards(): FAIL when player 0's handcount != 1\n");
+        printf("numHandCards(): FAIL if player 0's handcount != 1\n");
     }
 
     retVal = numHandCards(&test2);
     expVal = 1;
     if(compareInts(expVal, retVal) == 0){
-        printf("numHandCards(): PASS when player 5's handcount = 1\n");
+        printf("numHandCards(): PASS if player 4's handcount = 1\n");
     }
     else{
-        printf("numHandCards(): FAIL when player 5's handcount != 1\n");
+        printf("numHandCards(): FAIL if player 4's handcount != 1\n");
     }
 
     retVal = numHandCards(&test3);
     expVal = 20;
     if(compareInts(expVal, retVal) == 0){
-        printf("numHandCards(): PASS when player 1's handcount = 20\n");
+        printf("numHandCards(): PASS if player 1's handcount = 20\n");
     }
     else{
-        printf("numHandCards(): FAIL when player 1's handcount != 20\n");
+        printf("numHandCards(): FAIL if player 1's handcount != 20\n");
     }
 
     numHandCards(&test4);
     retVal = compareGameStates(&test4, &test5);
     expVal = 0;
     if(compareInts(expVal, retVal) == 0){
-        printf("numHandCards(): PASS when game state doesn't change after numHandCards() call\n");
+        printf("numHandCards(): PASS if game state doesn't change after numHandCards() call\n");
     }
     else{
-        printf("numHandCards(): FAIL when game state does change after numHandCards() call\n");
+        printf("numHandCards(): FAIL if game state does change after numHandCards() call\n");
     }
     return 0;
 }

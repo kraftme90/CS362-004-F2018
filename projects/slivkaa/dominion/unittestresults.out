@@ -1,0 +1,39 @@
+Result for running Dominion unit tests:
+unittest1.c:
+isGameOver(): PASS if game over with 0 province cards
+isGameOver(): PASS if game not over with 2 province cards
+isGameOver(): PASS if game over with 3 supply piles empty
+isGameOver(): PASS if game not over with <3 supply piles empty
+File 'dominion.c'
+Lines executed:7.64% of 563
+Creating 'dominion.c.gcov'
+
+unittest2.c:
+numHandCards(): PASS if player 0's handcount = 1
+numHandCards(): PASS if player 4's handcount = 1
+numHandCards(): PASS if player 1's handcount = 20
+numHandCards(): PASS if game state doesn't change after numHandCards() call
+File 'dominion.c'
+Lines executed:7.64% of 563
+Creating 'dominion.c.gcov'
+
+unittest3.c:
+buyCard(): PASS if card not bought when player's numBuys < 1
+buyCard(): PASS if card not bought when player's card supply count < 1
+buyCard(): PASS if card not bought when there's not enough money
+buyCard(): PASS if card bought when there's enough money
+buyCard(): PASS if game state doesn't change after not buying card
+buyCard(): PASS if game state does change after buying card
+File 'dominion.c'
+Lines executed:7.64% of 563
+Creating 'dominion.c.gcov'
+
+unittest4.c:
+handCard(): PASS if smithy in hand when player 1 plays smithy
+handCard(): PASS if treasure_map in hand when player 1 plays treasure_map
+handCard(): PASS if smithy in hand when player 4 plays smithy
+handCard(): PASS if hand array (in game state) changes when player 1 plays smithy
+File 'dominion.c'
+Lines executed:7.64% of 563
+Creating 'dominion.c.gcov'
+

@@ -43,45 +43,44 @@ int main(){
     states[7].phase = 1;
     states[7].discardCount[0]++;
     
-    printf("unittest3.c:\n");
     /* Test 1 */
     retVal = buyCard(province, &states[0]);
     expVal = -1;
     if(compareInts(expVal, retVal) == 0){
-        printf("buyCard(): PASS when player's numBuys < 1 \n");
+        printf("buyCard(): PASS if card not bought when player's numBuys < 1\n");
     }
     else{
-        printf("buyCard(): FAIL when player's numBuys < 1\n");
+        printf("buyCard(): FAIL if card bought when player's numBuys < 1\n");
     }
 
     /* Test 2 */
     retVal = buyCard(province, &states[1]);
     expVal = -1;
     if(compareInts(expVal, retVal) == 0){
-        printf("buyCard(): PASS when player's supply count for card < 1\n");
+        printf("buyCard(): PASS if card not bought when player's card supply count < 1\n");
     }
     else{
-        printf("buyCard(): FAIL when player's supply count for card  < 1\n");
+        printf("buyCard(): FAIL if card bought when player's supply count for card < 1\n");
     }
 
     /* Test 3 */
     retVal = buyCard(province, &states[2]);
     expVal = -1;
     if(compareInts(expVal, retVal) == 0){
-        printf("buyCard(): PASS when player doesn't have enough money to buy card\n");
+        printf("buyCard(): PASS if card not bought when there's not enough money\n");
     }
     else{
-        printf("buyCard(): FAIL when player doesn't have enough money to buy card\n");
+        printf("buyCard(): FAIL if card bought when there's not enough money\n");
     }
 
     /* Test 4 */
     retVal = buyCard(province, &states[3]);
     expVal = 0;
     if(compareInts(expVal, retVal) == 0){
-        printf("buyCard(): PASS when player has enough money to buy card\n");
+        printf("buyCard(): PASS if card bought when there's enough money\n");
     }
     else{
-        printf("buyCard(): FAIL when player has enough money to buy card\n");
+        printf("buyCard(): FAIL if card not bought when there's enough money\n");
     }
 
     /* Test 5 */
@@ -89,10 +88,10 @@ int main(){
     retVal = compareGameStates(&states[4], &states[5]);
     expVal = 0;
     if(compareInts(expVal, retVal) == 0){
-        printf("buyCard(): PASS when game state doesn't change after not buying card\n");
+        printf("buyCard(): PASS if game state doesn't change after not buying card\n");
     }
     else{
-        printf("buyCard(): FAIL when game state does change after not buying card\n");
+        printf("buyCard(): FAIL if game state does change after not buying card\n");
     }
 
     /* Test 6 */
@@ -101,10 +100,10 @@ int main(){
     retVal +=compareGameStates(&states[6], &states[7]);
     expVal = 0;
     if(compareInts(expVal, retVal) == 0){
-        printf("buyCard(): PASS when game state does change after buying card\n");
+        printf("buyCard(): PASS if game state does change after buying card\n");
     }
     else{
-        printf("buyCard(): FAIL when game state doesn't change after buying card\n");
+        printf("buyCard(): FAIL if game state doesn't change after buying card\n");
     }
 
    return 0;
