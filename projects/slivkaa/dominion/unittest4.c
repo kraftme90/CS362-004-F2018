@@ -3,7 +3,7 @@
 int main(){
 
     struct gameState states[5];
-    int i, retVal, expVal;
+    int i, retVal, expVal, numPasses = 0;
 
     for(i = 0; i < 5; i++){
         initGameState(&states[i]);
@@ -28,30 +28,33 @@ int main(){
     retVal = handCard(smithy, &states[0]);
     expVal = smithy;
     if(compareInts(expVal, retVal) == 0){
-        printf("handCard(): PASS if smithy in hand when player 1 plays smithy\n");
+        printf("handCard(): PASS smithy in hand when player 1 plays smithy\n");
+        numPasses++;
     }
     else{
-        printf("handCard(): FAIL if smithy not in hand when player 1 plays smithy\n");
+        printf("handCard(): FAIL smithy not in hand when player 1 plays smithy\n");
     }
 
      /* Test 2 */
     retVal = handCard(treasure_map, &states[1]);
     expVal = treasure_map;
     if(compareInts(expVal, retVal) == 0){
-        printf("handCard(): PASS if treasure_map in hand when player 1 plays treasure_map\n");
+        printf("handCard(): PASS treasure_map in hand when player 1 plays treasure_map\n");
+        numPasses++;
     }
     else{
-        printf("handCard(): FAIL if treasure_map not in hand when player 1 plays treasure_map\n");
+        printf("handCard(): FAIL treasure_map not in hand when player 1 plays treasure_map\n");
     }
 
      /* Test 3 */
     retVal = handCard(smithy, &states[2]);
     expVal = smithy;
     if(compareInts(expVal, retVal) == 0){
-        printf("handCard(): PASS if smithy in hand when player 4 plays smithy\n");
+        printf("handCard(): PASS smithy in hand when player 4 plays smithy\n");
+        numPasses++;
     }
     else{
-        printf("handCard(): FAIL if smithy not in hand when player 4 plays smithy\n");
+        printf("handCard(): FAIL smithy not in hand when player 4 plays smithy\n");
     }
 
     /* Test 4 */
@@ -59,19 +62,19 @@ int main(){
     retVal = compareGameStates(&states[3], &states[4]);
     expVal = 0;
     if(compareInts(expVal, retVal) == 0){
-        printf("handCard(): PASS if hand array (in game state) changes when player 1 plays smithy\n");
+        printf("handCard(): PASS hand array (in game state) changes when player 1 plays smithy\n");
+        numPasses++;
     }
     else{
-        printf("handCard(): FAIL if hand array(in game state) doesn't change when player 1 plays smithy\n");
+        printf("handCard(): FAIL hand array (in game state) doesn't change when player 1 plays smithy\n");
     }
 
+    if(numPasses == 4){
+       printf("TEST SUCCESSFULLY COMPLETED\n");
+    }
+    else{
+        printf("TEST FAILED\n");
+    }
 
    return 0;
 }
-
-/*
-int handCard(int handPos, struct gameState *state){
-  int currentPlayer = whoseTurn(state);
-  return state->hand[currentPlayer][handPos];
-}
-*/

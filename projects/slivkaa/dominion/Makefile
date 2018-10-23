@@ -29,14 +29,13 @@ runtests: testDrawCard
 	gcov dominion.c >> unittestresult.out
 	cat dominion.c.gcov >> unittestresult.out
 
-unittestresults: testLib.o runFuncTests
+unittestresults: testLib runFuncTests runCardTests
 
-testLib.o: testLib.c testLib.h
+testLib: testLib.c testLib.h
 	gcc -c testLib.c -g  $(CFLAGS)
 
 runFuncTests: unittest1.c unittest2.c unittest3.c unittest4.c dominion.o rngs.o testLib.o
-
-	echo "Result for running Dominion unit tests:" > unittestresults.out
+	echo "Result for running Dominion FUNCTION unit tests:" > unittestresults.out
 
 	echo "unittest1.c:" >> unittestresults.out
 	gcc -o unittest1 -g unittest1.c dominion.o rngs.o testLib.o $(CFLAGS)
@@ -57,6 +56,15 @@ runFuncTests: unittest1.c unittest2.c unittest3.c unittest4.c dominion.o rngs.o 
 	gcc -o unittest4 -g unittest4.c dominion.o rngs.o testLib.o $(CFLAGS)
 	./unittest4 >> unittestresults.out
 	gcov dominion.c >> unittestresults.out
+
+runCardTests: cardtest1.c  dominion.o rngs.o testLib.o
+	echo "Result for running Dominion CARD unit tests:" >> unittestresults.out
+
+	echo "cardtest1.c:" >> unittestresults.out
+	gcc -o cardtest1 -g cardtest1.c dominion.o rngs.o testLib.o $(CFLAGS)
+	./cardtest1 >> unittestresults.out
+	gcov dominion.c >> unittestresults.out
+
 
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)

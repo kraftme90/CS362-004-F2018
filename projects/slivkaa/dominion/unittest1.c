@@ -2,62 +2,71 @@
 
 int main(){
 
-    struct gameState test1, test2, test3, test4;
-    int i, retVal, expVal;
+    struct gameState states[5];
+    int i, retVal, expVal, numPasses = 0;
 
     for(i = 0; i < 25; i++){
-        test1.supplyCount[i] = 1;
-        test2.supplyCount[i] = 1;
-        test3.supplyCount[i] = 1;
-        test4.supplyCount[i] = 1;
+        states[0].supplyCount[i] = 1;
+        states[1].supplyCount[i] = 1;
+        states[2].supplyCount[i] = 1;
+        states[3].supplyCount[i] = 1;
     }
-    test1.supplyCount[province] = 0;
-
-    test2.supplyCount[province] = 2;
+    states[0].supplyCount[province] = 0;
+    states[1].supplyCount[province] = 2;
 
     for(i = 0; i < 3; i++){
-        test3.supplyCount[i] = 0;
+        states[2].supplyCount[i] = 0;
     }
     
     for(i = 0; i < 2; i++){
-        test4.supplyCount[i] = 2;
+        states[3].supplyCount[i] = 2;
     }
 
-    retVal = isGameOver(&test1);
+    retVal = isGameOver(&states[0]);
     expVal = 1;
     if(compareInts(expVal, retVal) == 0){
-        printf("isGameOver(): PASS if game over with 0 province cards\n");
+        printf("isGameOver(): PASS game over with 0 province cards\n");
+        numPasses++;
     }
     else{
-        printf("isGameOver(): FAIL if game not over with 0 province cards\n ");
+        printf("isGameOver(): FAIL game not over with 0 province cards\n ");
     }
    
-    retVal = isGameOver(&test2);
+    retVal = isGameOver(&states[1]);
     expVal = 0;
     if(compareInts(expVal, retVal) == 0){
-        printf("isGameOver(): PASS if game not over with 2 province cards\n");
+        printf("isGameOver(): PASS game not over with 2 province cards\n");
+        numPasses++;
     }
     else{
-        printf("isGameOver(): FAIL if game over with 2 province cards left\n");
+        printf("isGameOver(): FAIL game over with 2 province cards left\n");
     }
     
-    retVal = isGameOver(&test3);
+    retVal = isGameOver(&states[2]);
     expVal = 1;
      if(compareInts(expVal, retVal) == 0){
-        printf("isGameOver(): PASS if game over with 3 supply piles empty\n");
+        printf("isGameOver(): PASS game over with 3 supply piles empty\n");
+        numPasses++;
     }
     else{
-        printf("isGameOver(): FAIL if game not over with 3 supply piles empty\n");
+        printf("isGameOver(): FAIL game not over with 3 supply piles empty\n");
     }
    
-    retVal = isGameOver(&test4);
+    retVal = isGameOver(&states[3]);
     expVal = 0;
     if(compareInts(expVal, retVal) == 0){
-        printf("isGameOver(): PASS if game not over with <3 supply piles empty\n");
+        printf("isGameOver(): PASS game not over with <3 supply piles empty\n");
+        numPasses++;
     }
     else{
-        printf("isGameOver(): FAIL Game over with <3 supply piles empty\n");
+        printf("isGameOver(): FAIL game over with <3 supply piles empty\n");
     }
    
+   if(numPasses == 4){
+       printf("TEST SUCCESSFULLY COMPLETED\n");
+   }
+   else{
+       printf("TEST FAILED\n");
+   }
     return 0;
 }

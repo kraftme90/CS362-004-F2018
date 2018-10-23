@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include <string.h>
 #include <limits.h>
 
 int compareInts(int a, int b);
