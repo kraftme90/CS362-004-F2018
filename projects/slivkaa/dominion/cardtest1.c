@@ -3,27 +3,14 @@
 #define TESTCARD "smithy"
 int main(){
 
-    // struct gameState states[2];
-    int actual, expected, numPasses = 0;
-
     /* Basic requirements for smithy
     1. Current player should receive exact 3 cards.
     2. 3 cards should come from his own pile.
     3. No state change should occur for other players.
     4. No state change should occur to the victory card piles and kingdom card piles.
 
-        void playSmithy(struct gameState *state, int handPos, int currentPlayer){
-    // Variables used:  currentPlayer, handPos, state
-    //+3 Cards
-    int i;
-    for (i = 0; i < 3; i++){
-        drawCard(currentPlayer, state);
-        }		
-    //discard card from hand
-    //discardCard(handPos, currentPlayer, state, 0); //Bug: discardCard line commented out, artem 181013
-    }
-
      */  
+    int actual, expected, numPasses = 0;
     int newCards = 0;
     int discarded = 1;
     //int xtraCoins = 0;
@@ -112,48 +99,16 @@ int main(){
         printf("TEST 5: FAIL state change occured to the kingdom card piles (total K cards = %d, expected = %d)\n", actual, expected);
     }
 
-
     // ----------- TEST 6: played smithy card was discarded --------------
-    //actual = expected = 0;
     expected = 1;
     actual = ((initG.playedCardCount + discarded) == testG.playedCardCount) &&  ((initG.handCount[thisPlayer] - discarded)  == testG.handCount[thisPlayer]);
     if(actual == expected){
-            printf("TEST 6: PASS smithy card was discarded from player 1's hand after play (discarded?= %d, expected = %d)\n", actual, expected);
+            printf("TEST 6: PASS smithy card was discarded after play (discarded?= %d, expected = %d)\n", actual, expected);
             numPasses++;
     }
     else{
-        printf("TEST 6: FAIL smithy card wasn't discarded from player 1's hand after play (discarded? = %d, expected = %d)\n", actual, expected);
+        printf("TEST 6: FAIL smithy card wasn't discarded after play (discarded? = %d, expected = %d)\n", actual, expected);
     }
-
-    /*
-      //if card is not trashed, added to Played pile 
-        if (trashFlag < 1)
-            {
-            //add card to played pile
-            state->playedCards[state->playedCardCount] = state->hand[currentPlayer][handPos]; 
-            state->playedCardCount++;
-            }
-            
-        //set played card to -1
-        state->hand[currentPlayer][handPos] = -1;
-            
-        //remove card from player's hand
-        if ( handPos == (state->handCount[currentPlayer] - 1) ) 	//last card in hand array is played
-            {
-            //reduce number of cards in hand
-            state->handCount[currentPlayer]--;
-            }
-        else if ( state->handCount[currentPlayer] == 1 ) //only one card in hand
-            {
-            //reduce number of cards in hand
-            state->handCount[currentPlayer]--;
-            }
-
-
-
-
-    */
-
 
     if(numPasses == 6){
        printf("TEST SUCCESSFULLY COMPLETED\n");
@@ -161,8 +116,6 @@ int main(){
     else{
         printf("TEST FAILED\n");
     }
-
-     // ----------- TEST 5: No state change should occur to the kingdom card piles --------------
 
    return 0;
 }
