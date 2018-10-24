@@ -20,7 +20,7 @@ int main(){
      */  
     int numPasses = 0;
     int expected[3], actual[3];
-    int i, j;
+    // int i, j;
     int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
     int seed = 1000;
     int numPlayers = 2, thisPlayer = 0;
