@@ -13,9 +13,8 @@ int main(){
 
     struct gameState states[5];
     int i, j, actual, expected, numPasses = 0;
-
-    for(i = 0; i < 25; i++){
-        for(j = 0; j < 5; j++){
+    for(j = 0; j < 5; j++){
+        for(i = 0; i < 25; i++){
             initGameState(&states[j]);
             states[j].supplyCount[i] = 1;
         }
