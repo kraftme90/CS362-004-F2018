@@ -7,6 +7,7 @@
  */
 
 #include "testLib.h"
+#define TESTFUNC "isGameOver()"
 
 int main(){
 
@@ -30,44 +31,55 @@ int main(){
         states[3].supplyCount[i] = 2;
     }
 
+	printf("----------------- Testing function: %s ----------------\n", TESTFUNC);
+    // ----------- TEST 1: game over with 0 province cards --------------
+   
     retVal = isGameOver(&states[0]);
     expVal = 1;
     if(compareInts(expVal, retVal) == 0){
-        printf("isGameOver(): PASS game over with 0 province cards\n");
+        printf("TEST 1: PASS game over with 0 province cards\n");
+        printf("\treturn value = %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
-        printf("isGameOver(): FAIL game not over with 0 province cards\n ");
+        printf("TEST 1: FAIL game not over with 0 province cards\n");
+        printf("\treturn value = %d, expected = %d\n", actual, expected);
     }
    
     retVal = isGameOver(&states[1]);
     expVal = 0;
     if(compareInts(expVal, retVal) == 0){
-        printf("isGameOver(): PASS game not over with 2 province cards\n");
+        printf("TEST 2: PASS game not over with 2 province cards left\n");
+        printf("\treturn value = %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
-        printf("isGameOver(): FAIL game over with 2 province cards left\n");
+        printf("TEST 2: FAIL game over with 2 province cards left\n");
+        printf("\treturn value = %d, expected = %d\n", actual, expected);
     }
     
     retVal = isGameOver(&states[2]);
     expVal = 1;
      if(compareInts(expVal, retVal) == 0){
-        printf("isGameOver(): PASS game over with 3 supply piles empty\n");
+        printf("TEST 3: PASS game over with 3 supply piles empty\n");
+        printf("\treturn value = %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
-        printf("isGameOver(): FAIL game not over with 3 supply piles empty\n");
+        printf("TEST 3: FAIL game not over with 3 supply piles empty\n");
+        printf("\treturn value = %d, expected = %d\n", actual, expected);
     }
    
     retVal = isGameOver(&states[3]);
     expVal = 0;
     if(compareInts(expVal, retVal) == 0){
-        printf("isGameOver(): PASS game not over with <3 supply piles empty\n");
+        printf("TEST 4: PASS game not over with <3 supply piles empty\n");
+        printf("\treturn value = %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
-        printf("isGameOver(): FAIL game over with <3 supply piles empty\n");
+        printf("TEST 4: FAIL game over with <3 supply piles empty\n");
+        printf("\treturn value = %d, expected = %d\n", actual, expected);
     }
    
    if(numPasses == 4){
