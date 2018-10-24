@@ -32,9 +32,7 @@ int main(){
     
     states[4].supplyCount[province] = 0;
 
-	printf("----------------- Testing function: %s ----------------\n", TESTFUNC);
-    // ----------- TEST 1: game over with 0 province cards --------------
-   
+	printf("----------------- Testing function: %s ----------------\n", TESTFUNC);  
     actual = isGameOver(&states[0]);
     expected = 1;
     if(actual == expected){
