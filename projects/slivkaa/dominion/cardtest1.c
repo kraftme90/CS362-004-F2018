@@ -77,20 +77,33 @@ int main(){
         printf("\tdeck+hand count = %d, expected = %d\n", actual, expected);
     }
 
-    // ----------- TEST 4: No state change should occur to the victory card piles --------------
+    // ----------- TEST 4: played smithy card was discarded --------------
+    expected = 1;
+    actual = ((initG.playedCardCount + discarded) == testG.playedCardCount) &&  ((initG.handCount[thisPlayer] - discarded)  == testG.handCount[thisPlayer]);
+    if(actual == expected){
+        printf("TEST 4: PASS smithy card was discarded after play\n");
+        printf("\tdiscarded?= %d, expected = %d\n", actual, expected);
+        numPasses++;
+    }
+    else{
+        printf("TEST 4: FAIL smithy card wasn't discarded after play\n");
+        printf("\tdiscarded?= %d, expected = %d\n", actual, expected);
+    }
+
+    // ----------- TEST 5: No state change should occur to the victory card piles --------------
     actual = testG.supplyCount[estate] + testG.supplyCount[duchy] + testG.supplyCount[province];
     expected = initG.supplyCount[estate] + initG.supplyCount[duchy] + initG.supplyCount[province];
     if(actual == expected){
-        printf("TEST 4: PASS No state change occurred to the victory card piles\n");
+        printf("TEST 5: PASS No state change occurred to the victory card piles\n");
         printf("\ttotal V cards  = %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
-        printf("TEST 4: FAIL state change occured to the victory card piles\n");
+        printf("TEST 5: FAIL state change occured to the victory card piles\n");
         printf("\ttotal V cards  = %d, expected = %d\n", actual, expected);
     }
 
-    // ----------- TEST 5: No state change should occur to the kingdom card piles --------------
+    // ----------- TEST 6: No state change should occur to the kingdom card piles --------------
     actual = expected = 0;
     for (i = adventurer; i <= treasure_map; i++)       	//loop all cards
     {
@@ -105,26 +118,13 @@ int main(){
         }
     }
     if(actual == expected){
-        printf("TEST 5: PASS No state change occurred to the kingdom card piles\n");
+        printf("TEST 6: PASS No state change occurred to the kingdom card piles\n");
         printf("\ttotal K cards  = %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
-        printf("TEST 5: FAIL state change occured to the kingdom card piles\n");
+        printf("TEST 6: FAIL state change occured to the kingdom card piles\n");
         printf("\ttotal K cards  = %d, expected = %d\n", actual, expected);
-    }
-
-    // ----------- TEST 6: played smithy card was discarded --------------
-    expected = 1;
-    actual = ((initG.playedCardCount + discarded) == testG.playedCardCount) &&  ((initG.handCount[thisPlayer] - discarded)  == testG.handCount[thisPlayer]);
-    if(actual == expected){
-        printf("TEST 6: PASS smithy card was discarded after play\n");
-        printf("\tdiscarded?= %d, expected = %d\n", actual, expected);
-        numPasses++;
-    }
-    else{
-        printf("TEST 6: FAIL smithy card wasn't discarded after play\n");
-        printf("\tdiscarded?= %d, expected = %d\n", actual, expected);
     }
 
     if(numPasses == 6){
