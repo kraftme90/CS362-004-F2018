@@ -1,6 +1,6 @@
 #include "testLib.h"
 
-#define TESTCARD "smithy"
+#define TESTCARD "Smithy"
 int main(){
 
     /* Basic requirements for smithy

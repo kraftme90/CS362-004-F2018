@@ -1,6 +1,6 @@
 #include "testLib.h"
 
-#define TESTCARD "adventurer"
+#define TESTCARD "Adventurer"
 int main(){
 
     /* Basic testing for adventurer
