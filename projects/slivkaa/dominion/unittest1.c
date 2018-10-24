@@ -12,13 +12,13 @@
 int main(){
 
     struct gameState states[5];
-    int i, actual, expected, numPasses = 0;
+    int i, j, actual, expected, numPasses = 0;
 
     for(i = 0; i < 25; i++){
-        states[0].supplyCount[i] = 1;
-        states[1].supplyCount[i] = 1;
-        states[2].supplyCount[i] = 1;
-        states[3].supplyCount[i] = 1;
+        for(j = 0; j < 5; j++){
+            initGameState(&states[j]);
+            states[j].supplyCount[i] = 1;
+        }
     }
     states[0].supplyCount[province] = 0;
     states[1].supplyCount[province] = 2;
@@ -30,6 +30,8 @@ int main(){
     for(i = 0; i < 2; i++){
         states[3].supplyCount[i] = 2;
     }
+    
+    states[4].supplyCount[province] = 0;
 
 	printf("----------------- Testing function: %s ----------------\n", TESTFUNC);
     // ----------- TEST 1: game over with 0 province cards --------------
@@ -82,7 +84,19 @@ int main(){
         printf("\treturn value = %d, expected = %d\n", actual, expected);
     }
    
-   if(numPasses == 4){
+    actual = compareGameStates(&states[4], &states[0]);
+    expected = 0;
+    if(actual == expected){
+        printf("TEST 5: PASS game state didn't change after isGameOver call \n");
+        printf("\tequal states = %d, expected = %d\n", actual, expected);
+        numPasses++;
+    }
+    else{
+        printf("TEST 5: PASS game state did change after isGameOver call \n");
+        printf("\tequal states = %d, expected = %d\n", actual, expected);
+    }
+
+   if(numPasses == 5){
        printf("TEST SUCCESSFULLY COMPLETED\n");
    }
    else{
