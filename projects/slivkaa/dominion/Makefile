@@ -40,22 +40,22 @@ runFuncTests: unittest1.c unittest2.c unittest3.c unittest4.c dominion.o rngs.o 
 	echo "unittest1.c:" >> unittestresults.out
 	gcc -o unittest1 -g unittest1.c dominion.o rngs.o testLib.o $(CFLAGS)
 	./unittest1 >> unittestresults.out
-	gcov dominion.c >> unittestresults.out
+	gcov -b dominion.c >> unittestresults.out
 
 	echo "unittest2.c:" >> unittestresults.out
 	gcc -o unittest2 -g unittest2.c dominion.o rngs.o testLib.o $(CFLAGS)
 	./unittest2 >> unittestresults.out
-	gcov dominion.c >> unittestresults.out
+	gcov -b dominion.c >> unittestresults.out
 
 	echo "unittest3.c:" >> unittestresults.out
 	gcc -o unittest3 -g unittest3.c dominion.o rngs.o testLib.o $(CFLAGS)
 	./unittest3 >> unittestresults.out
-	gcov dominion.c >> unittestresults.out
+	gcov -b dominion.c >> unittestresults.out
 
 	echo "unittest4.c:" >> unittestresults.out
 	gcc -o unittest4 -g unittest4.c dominion.o rngs.o testLib.o $(CFLAGS)
 	./unittest4 >> unittestresults.out
-	gcov dominion.c >> unittestresults.out
+	gcov -b dominion.c >> unittestresults.out
 
 runCardTests: cardtest1.c cardtest2.c cardtest3.c cardtest4.c dominion.o rngs.o testLib.o
 	echo "Result for running Dominion CARD unit tests:" >> unittestresults.out
