@@ -52,13 +52,13 @@ int main(){
     if( (actual[0] == expected[0]) && (actual[1] == expected[1]) ){ 
         printf("TEST 1: PASS player 1 has +2 treasure cards in his hand \n");
         printf("\ttreasure count = %d, expected = %d \n", actual[0], expected[0]);
-        printf("\tbefore draw hand count = %d, after draw hand count = %d, expected = %d\n", [initG.handCount[thisPlayer]], actual[1], expected[1]); 
+        printf("\tbefore draw hand count = %d, after draw hand count = %d, expected = %d\n", initG.handCount[thisPlayer], actual[1], expected[1]); 
         numPasses++;
     }
     else{
         printf("TEST 1: FAIL player 1 doesn't have +2 treasure cards in his hand\n");
         printf("\ttreasure count = %d, expected = %d\n", actual, expected);
-        printf("\tbefore draw hand count = %d, after draw hand count = %d, expected = %d\n", [initG.handCount[thisPlayer]], actual[1], expected[1]); 
+        printf("\tbefore draw hand count = %d, after draw hand count = %d, expected = %d\n", initG.handCount[thisPlayer], actual[1], expected[1]); 
     }
 
     // ----------- TEST 2: All drawn cards (except 2 treasure cards) should be moved to discard pile --------------
@@ -99,7 +99,6 @@ int main(){
     }
 
     // ----------- TEST 4: No state change should occur to other's players hand and deck piles. --------------   
-    int deckCards = 0, handCards = 0;
     expected[0] = initG.handCount[thisPlayer+1];
     actual[0]= testG.handCount[thisPlayer+1];
     expected[1] = initG.deckCount[thisPlayer+1];
