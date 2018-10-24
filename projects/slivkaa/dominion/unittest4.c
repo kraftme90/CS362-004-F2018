@@ -1,3 +1,11 @@
+/* -----------------------------------------------------------------------
+ * To compile this file include the following lines in your makefile:
+ *
+ * testUpdateCoins: unittest4.c dominion.o rngs.o testLib.o
+ *      	gcc -o unittest4 -g unittest4.c dominion.o rngs.o testLib.o $(CFLAGS)
+ * -----------------------------------------------------------------------
+ */
+
 #include "testLib.h"
 
 int main(){

@@ -1,3 +1,12 @@
+
+/* -----------------------------------------------------------------------
+ * To compile this file include the following lines in your makefile:
+ *
+ * testUpdateCoins: cardtest3.c dominion.o rngs.o testLib.o
+ *      	gcc -o cardtest3 -g cardtest3.c dominion.o rngs.o testLib.o $(CFLAGS)
+ * -----------------------------------------------------------------------
+ */
+
 #include "testLib.h"
 
 #define TESTCARD "Village"
@@ -53,45 +62,38 @@ int main(){
     }
 
     // ----------- TEST 3: player 1 discards village card from hand --------------
-    numPCards[0] = initG.playedCardCount + 1;
-    numPCards[1] = testG.playedCardCount;
-    handChange[0] = 0;
-    handChange[1]= (initG.handCount[thisPlayer] - testG.handCount[thisPlayer]);
-
     expected[0] = initG.playedCardCount + 1;
-    expected[1] = 0;
+    expected[1] = initG.handCount[thisPlayer];
     actual[0] = testG.playedCardCount;
-
-
-    if( (numPCards[0] == numPCards[1]) && (handChange[0] == handChange[1])){ 
+    actual[1] = testG.handCount[thisPlayer]);
+    if( (actual[0] == expected[0]) && (actual[1] == expected[1])){ 
         printf("TEST 3: PASS player 1 discards village card from hand\n");
-        printf("\tnum of playedCards = %d, expected = %d\n", numPCards[1], numPCards[0]);
-        printf("\tchange of cards in hand = %d, expected = %d\n", handChange[1], handChange[0]);
+        printf("\tnum of playedCards = %d, expected = %d\n", actual[0], expected[0]);
+        printf("\tfinal hand count = %d, expected = %d\n", actual[1], expected[1]);
         numPasses++;
     }
     else{
         printf("TEST 3: FAIL player 1 doesn't discard village card from hand\n");
-        printf("\tnum of playedCards = %d, expected = %d\n", numPCards[1], numPCards[0]);
-        printf("\tchange of cards in hand = %d, expected = %d\n", handChange[1], handChange[0]);
+        printf("\tnum of playedCards = %d, expected = %d\n", actual[0], expected[0]);
+        printf("\tfinal hand count = %d, expected = %d\n", actual[1], expected[1]);
     }
 
     // ----------- TEST 4: check state changes to other player's decks/hands --------------
-    int p2DeckCount[2], p2HandCount[2];
-    p2DeckCount[0] = initG.deckCount[thisPlayer+1];
-    p2DeckCount[1] = testG.deckCount[thisPlayer+1];
-    p2HandCount[0] = initG.handCount[thisPlayer+1];
-    p2HandCount[1] = testG.handCount[thisPlayer+1];
+    expected[0] = initG.handCount[thisPlayer+1];
+    expected[1] = initG.deckCount[thisPlayer+1];
+    actual[0] = testG.handCount[thisPlayer+1];
+    actual[0] = testG.deckCount[thisPlayer+1];
 
-    if((p2DeckCount[0] == p2DeckCount[1]) && (p2HandCount[0] == p2HandCount[1])){
+    if( (actual[0] == expected[0]) && (actual[1] == expected[1])){ 
         printf("TEST 4: PASS no state change occured to other player's deck/hand\n");
-        printf("\thand count = %d, expected = %d\n", p2HandCount[1], p2HandCount[0]);
-        printf("\tdeck count = %d, expected = %d\n", p2DeckCount[1], p2DeckCount[0]);
+        printf("\thand count = %d, expected = %d\n", actual[0], expected[0]);
+        printf("\tdeck count = %d, expected = %d\n", actual[1], expected[1]);
         numPasses++;
     }
     else{
         printf("TEST 3: FAIL state change occured to other player's deck/hand\n");
-        printf("\thand count = %d, expected = %d\n", p2HandCount[1], p2HandCount[0]);
-        printf("\tdeck count = %d, expected = %d\n", p2DeckCount[1], p2DeckCount[0]);
+        printf("\thand count = %d, expected = %d\n", actual[0], expected[0]);
+        printf("\tdeck count = %d, expected = %d\n", actual[1], expected[1]);
     }
 
     if(numPasses == 4){

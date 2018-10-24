@@ -1,3 +1,11 @@
+
+/* -----------------------------------------------------------------------
+ * To compile this file include the following lines in your makefile:
+ *
+ * testUpdateCoins: cardtest1.c dominion.o rngs.o testLib.o
+ *      	gcc -o cardtest1 -g cardtest1.c dominion.o rngs.o testLib.o $(CFLAGS)
+ * -----------------------------------------------------------------------
+ */
 #include "testLib.h"
 
 #define TESTCARD "Smithy"
@@ -13,10 +21,7 @@ int main(){
     int actual, expected, numPasses = 0;
     int newCards = 0;
     int discarded = 1;
-    //int xtraCoins = 0;
-    //int shuffledCards = 0;
     int i, j;
-    //int m;
     int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
     int seed = 1000;
     int numPlayers = 2, thisPlayer = 0;

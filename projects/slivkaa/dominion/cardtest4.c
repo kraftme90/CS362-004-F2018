@@ -1,4 +1,12 @@
 
+/* -----------------------------------------------------------------------
+ * To compile this file include the following lines in your makefile:
+ *
+ * testUpdateCoins: cardtest4.c dominion.o rngs.o testLib.o
+ *      	gcc -o cardtest4 -g cardtest4.c dominion.o rngs.o testLib.o $(CFLAGS)
+ * -----------------------------------------------------------------------
+ */
+
 #include "testLib.h"
 
 #define TESTCARD "Great Hall"
@@ -8,19 +16,7 @@ int main(){
     1. +1 card draw from deck/discard pile 
     2. add +1 actions to game state
     3. great halld card discarded from hand, playedCardCount+1
-    4. check state changes to other player's decks/hands
-   
-    case great_hall:
-      //+1 Card
-      drawCard(currentPlayer, state);
-			
-      //+1 Actions
-      state->numActions++;
-			
-      //discard card from hand
-      discardCard(handPos, currentPlayer, state, 0);
-      return 0;
-     
+    4. check state changes to other player's decks/hands     
      */  
     int numPasses = 0;
     int expected[3], actual[3];
@@ -72,7 +68,6 @@ int main(){
     expected[1] = 0;
     actual[0] = testG.playedCardCount;
     actual[1] = (initG.handCount[thisPlayer] - testG.handCount[thisPlayer]);
-
     if( (expected[0] == actual[0]) && (expected[1] == actual[1])){ 
         printf("TEST 3: PASS player 1 discards village card from hand\n");
         printf("\tnum of playedCards = %d, expected = %d\n", actual[0], expected[0]);
