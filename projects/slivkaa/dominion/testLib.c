@@ -88,10 +88,11 @@ void printGameState(struct gameState *state){
     printf("numPlayers: %d\n", state->numPlayers);
 
     for(i = 0; i < treasure_map+1; i++){
-        printf("supplyCount[%d]: %d\tembargoTokens[%d]: %d\n", i, state->supplyCount[i], i, state->embargoTokens[i]);
+        printf("supplyCount[%d]: %d, ", i, state->supplyCount[i]);
+        if(i % 4 == 0){printf("\n");}
     }
-    for(i = 0; i < MAX_PLAYERS; i++){
-        printf("hand[%d][0]: %d ", i, state->hand[i][0]);
+    for(i = 0; i < 2; i++){
+        printf("\nhand[%d][0]: %d ", i, state->hand[i][0]);
         printf("handCount[%d]: %d ", i, state->handCount[i]);
         printf("deck[%d][0]: %d ", i, state->deck[i][0]);
         printf("deckCount[%d]: %d ", i, state->deckCount[i]);
@@ -99,10 +100,10 @@ void printGameState(struct gameState *state){
         printf("discardCount[%d]: %d", i, state->discardCount[i]); 
     }
 
-    // printf("\nplayedCards\n");
-    // for(i = 0; i < MAX_DECK; i++){
-    //     state->playedCards[i] = 0; 
-    //     printf("[%d]:%d ", i, state->playedCards[i]);      
-    // } 
+    printf("\nplayedCards\n");
+    for(i = 0; i < state->playedCardCount; i++){
+        state->playedCards[i] = 0; 
+        printf("playedCards[%d]:%d ", i, state->playedCards[i]);      
+    } 
 }
 

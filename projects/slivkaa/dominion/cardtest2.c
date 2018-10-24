@@ -3,44 +3,16 @@
 #define TESTCARD "adventurer"
 int main(){
 
-    /* Basic requirements for adventurer
-    1. Player should have 2 treasure cards in his hand (handCount == 2)
-    3. All cards from hand pile (except treasure cards) should be moved to discard pile
-    4. No state change should occur to kingdom card piles.
-    5. No state change should occur to other's players hand piles.
-
-    void playAdventurer(struct gameState *state, int drawntreasure, int z, int currentPlayer, int cardDrawn, int *temphand){
-    // Variables used: drawntreasure, state, currentPlayer, z, temphand
-    //while(drawntreasure<2){   //Original line
-    while(drawntreasure<4){   //Bug: allows adventurer to draw more treasure cards than intended, artem 181013
-        if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
-         shuffle(currentPlayer, state);
-        }
-        drawCard(currentPlayer, state);
-        cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
-        if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold){
-            drawntreasure++; 
-        }
-        else{
-            temphand[z]=cardDrawn;
-            state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
-            z++;
-        }
-    }
-        while(z-1>=0){
-            state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
-            z=z-1;
-        }
-    }
-
+    /* Basic testing for adventurer
+    1. At end of play, player should have +2 treasure cards in his hand 
+    2. All drawn cards besides 2 treasure cards should be moved to discard pile
+    3. No state change should occur to kingdom card piles.
+    4. No state change should occur to other's players hand and deck piles.
      */  
     int actual, expected, numPasses = 0;
-    int newCards = 0, card;
-    int discarded = 1;
-    //int xtraCoins = 0;
-    //int shuffledCards = 0;
+    int expHandCount, actHandCount, expDeckCount, actDeckCount;
+    int card;
     int i, j;
-    //int m;
     int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
     int seed = 1000;
     int numPlayers = 2, thisPlayer = 0;
@@ -54,16 +26,12 @@ int main(){
     memcpy(&testG, &initG, sizeof(struct gameState));
     //Playing card
     choice3 = thisPlayer;
-    printf("Before playing card\n");
-    printGameState(&testG);
 	cardEffect(adventurer, choice1, choice2, choice3, &testG, handpos, &bonus);
-    printf("After playing card\n");
-    printGameState(&testG);
 
 	printf("----------------- Testing Card: %s ----------------\n", TESTCARD);
-	// ----------- TEST 1: player should have exactly 2 treasure cards in his deck --------------
+	// ----------- TEST 1: player should have +2 treasure cards in his hand  --------------
     int numTreasures = 0;
-    for(i = 0; i < testG.handCount[thisPlayer]; i++){
+    for(i = initG.handCount[thisPlayer] - 1; i < testG.handCount[thisPlayer]; i++){
         card = testG.hand[thisPlayer][i];
         if(card == copper || card == silver || card == gold){
             numTreasures +=1;
@@ -71,41 +39,94 @@ int main(){
     }
     actual = numTreasures;
     expected = 2;
-    if( (actual == expected) && testG.handCount[thisPlayer] == 2){
-        printf("TEST 1: PASS player 1 has 2 treasure cards in his hand\n");
-        printf("treasure count = %d, expected = %d)\n", actual, expected);
-        printf("hand count = %d, expected = %d)\n", testG.handCount[thisPlayer], expected);
+    expHandCount = (initG.handCount[thisPlayer] + 2);
+    actHandCount = testG.handCount[thisPlayer];
+    if( (actual == expected) && (actHandCount == expHandCount) ){
+        printf("TEST 1: PASS player 1 has +2 treasure cards in his hand \n");
+        printf("\ttreasure count = %d, expected = %d \n", actual, expected);
+        printf("\tbefore draw hand count = %d, after draw hand count = %d, expected = %d\n", initG.handCount[thisPlayer], actHandCount, expHandCount); 
         numPasses++;
     }
     else{
-        printf("TEST 1: FAIL player 1 doesn't have 2 treasure cards in his hand\n", actual, expected);
-        printf("(treasure count = %d, expected = %d) ", actual, expected);
-        printf("(hand count = %d, expected = %d)\n", testG.handCount[thisPlayer], expected);
+        printf("TEST 1: FAIL player 1 doesn't have +2 treasure cards in his hand\n");
+        printf("\ttreasure count = %d, expected = %d\n", actual, expected);
+        printf("\tbefore draw hand count = %d, after draw hand count = %d, expected = %d\n", initG.handCount[thisPlayer], actHandCount, expHandCount); 
     }
 
+    // ----------- TEST 2: All drawn cards (except 2 treasure cards) should be moved to discard pile --------------
+    expected = 0;
+    actual = testG.discardCount[thisPlayer] - initG.discardCount[thisPlayer];
+    if(expected <= actual){
+        printf("TEST 2: PASS all non-treasure cards drawn were moved to discard pile\n");
+        printf("\tdiscarded count = %d, expected >= %d\n", actual, expected);
+        numPasses++;
+    }
+    else{
+        printf("TEST 2: FAIL all non-treasure cards drawn were not moved to discard pile\n");
+        printf("\tdiscarded count = %d, expected >= %d\n", actual, expected);
+    }
 
-    // ----------- TEST 2: All cards from hand pile (except treasure cards) should be moved to discard pile --------------
-    // int actCount = testG.handCount[thisPlayer];
-    // int expCount = 2;
-    numTreasures = 0;
-    for(i = 0; i < initG.handCount[thisPlayer]; i++){
-        card = initG.hand[thisPlayer][i];
-        if(card == copper || card == silver || card == gold){
-            numTreasures +=1;
+    // ----------- TEST 3: No state change should occur to kingdom card piles. --------------
+    actual = expected = 0;
+    for (i = adventurer; i <= treasure_map; i++)       	//loop all cards
+    {
+        for (j = 0; j < 10; j++)           		//loop chosen cards
+        {
+            if (k[j] == i)
+            {
+                actual +=testG.supplyCount[i];
+                expected += initG.supplyCount[i];
+                break;
+            }
         }
     }
-    expected = initG.handCount[thisPlayer] - numTreasures;
-    actual = testG.discardCount[thisPlayer] - initG.discardCount[thisPlayer];
-    if(expected == actual){
-        printf("TEST 2: PASS all non-treasure cards in player's hand were moved to discard pile (discarded count = %d, expected = %d)\n", actual, expected);
+    if(expected == actual){ 
+        printf("TEST 3: PASS No state change occured to kingdom card piles\n");
+        printf("\tK card count = %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
-        printf("TEST 2: FAIL all non-treasure cards in player's hand were NOT moved to discard pile (discarded count = %d, expected = %d)\n", actual, expected);
+        printf("TEST 3: FAIL State change occured to kingdom card piles\n");
+        printf("\tK card count = %d, expected = %d\n", actual, expected);
     }
 
+    // ----------- TEST 4: No state change should occur to other's players hand and deck piles. --------------   
+    int deckCards = 0, handCards = 0;
+    expHandCount = initG.handCount[thisPlayer+1];
+    actHandCount = testG.handCount[thisPlayer+1];
+    expDeckCount = initG.deckCount[thisPlayer+1];
+    actDeckCount = testG.deckCount[thisPlayer+1];
+    if(expHandCount == actHandCount){
+        for(i = 0; i < expHandCount; i++){
+            if(initG.hand[thisPlayer+1][i] != testG.hand[thisPlayer+1][i]){
+                handCards++;
+            }
+        }
+    }
+    if(expDeckCount == actDeckCount){
+        for(i = 0; i < expDeckCount; i++){
+            if(initG.deck[thisPlayer+1][i] != testG.deck[thisPlayer+1][i]){
+                deckCards++;
+            }
+        }
+    }
+    if( (handCards == 0) && (deckCards == 0) && (expHandCount == actHandCount) && (expDeckCount == actDeckCount) ){ 
+        printf("TEST 4: PASS No state change occured to player 2's hand and deck piles\n");
+        printf("\thand card count = %d, expected = %d\n", actHandCount, expHandCount);
+        printf("\tdeck card count = %d, expected = %d\n", actDeckCount, expDeckCount);
+        printf("\tnum of different hand cards = %d, expected = %d\n", handCards, 0);
+        printf("\tnum of different deck cards = %d, expected = %d\n", deckCards, 0);
+        numPasses++;
+    }
+    else{
+        printf("TEST 4: FAIL State change occured to player 2's hand and deck piles\n");
+        printf("\thand card count = %d, expected = %d\n", actHandCount, expHandCount);
+        printf("\tdeck card count = %d, expected = %d\n", actDeckCount, expDeckCount);
+        printf("\tnum of different hand cards = %d, expected = %d\n", handCards, 0);
+        printf("\tnum of different deck cards = %d, expected = %d\n", deckCards, 0);
+    }
 
-    if(numPasses == 2){
+    if(numPasses == 4){
        printf("TEST SUCCESSFULLY COMPLETED\n");
     }
     else{

@@ -1098,15 +1098,14 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 }
 
 int discardCard(int handPos, int currentPlayer, struct gameState *state, int trashFlag)
-{
-	
+{	
   //if card is not trashed, added to Played pile 
   if (trashFlag < 1)
-    {
-      //add card to played pile
-      state->playedCards[state->playedCardCount] = state->hand[currentPlayer][handPos]; 
-      state->playedCardCount++;
-    }
+  {
+    //add card to played pile
+    state->playedCards[state->playedCardCount] = state->hand[currentPlayer][handPos]; 
+    state->playedCardCount++;
+  }
 	
   //set played card to -1
   state->hand[currentPlayer][handPos] = -1;
@@ -1202,7 +1201,6 @@ int updateCoins(int player, struct gameState *state, int bonus)
 }
 
 void playAdventurer(struct gameState *state, int drawntreasure, int z, int currentPlayer, int cardDrawn, int *temphand){
-  // Variables used: drawntreasure, state, currentPlayer, z, temphand
   //while(drawntreasure<2){   //Original line
   while(drawntreasure<4){   //Bug: allows adventurer to draw more treasure cards than intended, artem 181013
     if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
