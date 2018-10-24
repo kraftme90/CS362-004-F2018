@@ -127,10 +127,12 @@ int main(){
     expected = 0;
     if(expected == actual){
         printf("TEST 6: PASS game state does change after buying card\n");
+        printf("\tstate changed? = %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
         printf("TEST 6: FAIL game state doesn't change after buying card\n");
+        printf("\tstate changed? = %d, expected = %d\n", actual, expected);
     }
 
     if(numPasses == 6){

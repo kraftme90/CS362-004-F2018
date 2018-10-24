@@ -38,12 +38,12 @@ int main(){
     expected = 1;
     if(actual == expected){
         printf("TEST 1: PASS game over with 0 province cards\n");
-        printf("\treturn value = %d, expected = %d\n", actual, expected);
+        printf("\tgame over = %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
         printf("TEST 1: FAIL game not over with 0 province cards\n");
-        printf("\treturn value = %d, expected = %d\n", actual, expected);
+        printf("\tgame over = %d, expected = %d\n", actual, expected);
     }
    
    /* Test 2 */
@@ -51,12 +51,12 @@ int main(){
     expected = 0;
     if(actual == expected){
         printf("TEST 2: PASS game not over with 2 province cards left\n");
-        printf("\treturn value = %d, expected = %d\n", actual, expected);
+        printf("\tgame over = %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
         printf("TEST 2: FAIL game over with 2 province cards left\n");
-        printf("\treturn value = %d, expected = %d\n", actual, expected);
+        printf("\tgame over = %d, expected = %d\n", actual, expected);
     }
     
     /* Test 3 */
@@ -64,12 +64,12 @@ int main(){
     expected = 1;
     if(actual == expected){
         printf("TEST 3: PASS game over with 3 supply piles empty\n");
-        printf("\treturn value = %d, expected = %d\n", actual, expected);
+        printf("\tgame over = %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
         printf("TEST 3: FAIL game not over with 3 supply piles empty\n");
-        printf("\treturn value = %d, expected = %d\n", actual, expected);
+        printf("\tgame over = %d, expected = %d\n", actual, expected);
     }
    
    /* Test 4 */
@@ -77,12 +77,12 @@ int main(){
     expected = 0;
     if(actual == expected){
         printf("TEST 4: PASS game not over with <3 supply piles empty\n");
-        printf("\treturn value = %d, expected = %d\n", actual, expected);
+        printf("\tgame over = %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
         printf("TEST 4: FAIL game over with <3 supply piles empty\n");
-        printf("\treturn value = %d, expected = %d\n", actual, expected);
+        printf("\tgame over = %d, expected = %d\n", actual, expected);
     }
    
     /* Test 5 */
@@ -90,12 +90,12 @@ int main(){
     expected = 0;
     if(actual == expected){
         printf("TEST 5: PASS game state didn't change after isGameOver call \n");
-        printf("\tequal states = %d, expected = %d\n", actual, expected);
+        printf("\tstate changed? = %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
         printf("TEST 5: PASS game state did change after isGameOver call \n");
-        printf("\tequal states = %d, expected = %d\n", actual, expected);
+        printf("\tstate changed? = %d, expected = %d\n", actual, expected);
     }
 
    if(numPasses == 5){
