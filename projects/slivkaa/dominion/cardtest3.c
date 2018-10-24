@@ -65,8 +65,8 @@ int main(){
     expected[0] = initG.playedCardCount + 1;
     expected[1] = initG.handCount[thisPlayer];
     actual[0] = testG.playedCardCount;
-    actual[1] = testG.handCount[thisPlayer]);
-    if( (actual[0] == expected[0]) && (actual[1] == expected[1])){ 
+    actual[1] = testG.handCount[thisPlayer];
+    if( (actual[0] == expected[0]) && (actual[1] == expected[1]) ){ 
         printf("TEST 3: PASS player 1 discards village card from hand\n");
         printf("\tnum of playedCards = %d, expected = %d\n", actual[0], expected[0]);
         printf("\tfinal hand count = %d, expected = %d\n", actual[1], expected[1]);
