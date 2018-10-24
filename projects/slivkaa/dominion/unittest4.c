@@ -7,11 +7,13 @@
  */
 
 #include "testLib.h"
+#define TESTFUNC "handCard()"
+
 
 int main(){
 
     struct gameState states[5];
-    int i, retVal, expVal, numPasses = 0;
+    int i, actual, expected, numPasses = 0;
 
     for(i = 0; i < 5; i++){
         initGameState(&states[i]);
@@ -32,49 +34,58 @@ int main(){
     states[4].whoseTurn = 0;  /* Test 3 init */
     states[4].hand[0][smithy] = smithy;
    
+    printf("----------------- Testing function: %s ----------------\n", TESTFUNC);  
     /* Test 1 */
-    retVal = handCard(smithy, &states[0]);
-    expVal = smithy;
-    if(compareInts(expVal, retVal) == 0){
+    actual = handCard(smithy, &states[0]);
+    expected = smithy;
+    if(expected == actual){
         printf("handCard(): PASS smithy in hand when player 1 plays smithy\n");
+        printf("\tcurrent card in hand= %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
         printf("handCard(): FAIL smithy not in hand when player 1 plays smithy\n");
+        printf("\tcurrent card in hand= %d, expected = %d\n", actual, expected);
     }
 
      /* Test 2 */
-    retVal = handCard(treasure_map, &states[1]);
-    expVal = treasure_map;
-    if(compareInts(expVal, retVal) == 0){
+    actual = handCard(treasure_map, &states[1]);
+    expected = treasure_map;
+    if(expected == actual){
         printf("handCard(): PASS treasure_map in hand when player 1 plays treasure_map\n");
+        printf("\tcurrent card in hand= %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
         printf("handCard(): FAIL treasure_map not in hand when player 1 plays treasure_map\n");
+        printf("\tcurrent card in hand= %d, expected = %d\n", actual, expected);
     }
 
      /* Test 3 */
-    retVal = handCard(smithy, &states[2]);
-    expVal = smithy;
-    if(compareInts(expVal, retVal) == 0){
+    actual = handCard(smithy, &states[2]);
+    expected = smithy;
+    if(expected == actual){
         printf("handCard(): PASS smithy in hand when player 4 plays smithy\n");
+        printf("\tcurrent card in hand= %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
         printf("handCard(): FAIL smithy not in hand when player 4 plays smithy\n");
+        printf("\tcurrent card in hand= %d, expected = %d\n", actual, expected);
     }
 
     /* Test 4 */
     handCard(smithy, &states[3]);
-    retVal = compareGameStates(&states[3], &states[4]);
-    expVal = 0;
-    if(compareInts(expVal, retVal) == 0){
+    actual = compareGameStates(&states[3], &states[4]);
+    expected = 0;
+    if(expected == actual){
         printf("handCard(): PASS hand array (in game state) changes when player 1 plays smithy\n");
+        printf("\tgame state changed?= %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
         printf("handCard(): FAIL hand array (in game state) doesn't change when player 1 plays smithy\n");
+        printf("\tgame state changed?= %d, expected = %d\n", actual, expected);
     }
 
     if(numPasses == 4){
