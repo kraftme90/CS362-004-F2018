@@ -1,70 +1,109 @@
 Result for running Dominion FUNCTION unit tests:
 unittest1.c:
-isGameOver(): PASS game over with 0 province cards
-isGameOver(): PASS game not over with 2 province cards
-isGameOver(): PASS game over with 3 supply piles empty
-isGameOver(): PASS game not over with <3 supply piles empty
+----------------- Testing function: isGameOver() ----------------
+TEST 1: PASS game over with 0 province cards
+	game over = 1, expected = 1
+TEST 2: PASS game not over with 2 province cards left
+	game over = 0, expected = 0
+TEST 3: PASS game over with 3 supply piles empty
+	game over = 1, expected = 1
+TEST 4: PASS game not over with <3 supply piles empty
+	game over = 0, expected = 0
+TEST 5: PASS game state didn't change after isGameOver call 
+	state changed? = 0, expected = 0
 TEST SUCCESSFULLY COMPLETED
 File 'dominion.c'
-Lines executed:33.39% of 563
+Lines executed:1.78% of 563
+Branches executed:1.92% of 417
+Taken at least once:1.92% of 417
+Calls executed:0.00% of 93
 Creating 'dominion.c.gcov'
 
 unittest2.c:
-numHandCards(): PASS player 0's handcount = 1
-numHandCards(): PASS player 4's handcount = 1
-numHandCards(): PASS player 1's handcount = 20
-numHandCards(): PASS game state doesn't change after numHandCards() call
+----------------- Testing function: numHandCards() ----------------
+TEST 1: PASS player 0's handcount = 1
+	hand count = 1, expected = 1
+TEST 2: PASS player 4's handcount = 1
+	hand count = 1, expected = 1
+TEST 3: PASS player 1's handcount = 20
+	hand count = 20, expected = 20
+TEST 4: PASS game state doesn't change after numHandCards() call
+	game state changed? = 0, expected = 0
 TEST SUCCESSFULLY COMPLETED
 File 'dominion.c'
-Lines executed:33.39% of 563
+Lines executed:2.49% of 563
+Branches executed:1.92% of 417
+Taken at least once:1.92% of 417
+Calls executed:1.08% of 93
 Creating 'dominion.c.gcov'
 
 unittest3.c:
-buyCard(): PASS card not bought when player's numBuys < 1
-buyCard(): PASS card not bought when player's card supply count < 1
-buyCard(): PASS card not bought when there's not enough money
-buyCard(): PASS card bought when there's enough money
-buyCard(): PASS game state doesn't change after not buying card
-buyCard(): PASS game state does change after buying card
+----------------- Testing function: buyCard() ----------------
+TEST 1: PASS card not bought when player's numBuys < 1
+	card bought = -1, expected = -1
+TEST 2: PASS card not bought when player's card supply count < 1
+	card bought = -1, expected = -1
+TEST 3: PASS card not bought when there's not enough money
+	card bought = -1, expected = -1
+TEST 4: PASS card bought when there's enough money
+	card bought = 0, expected = 0
+TEST 5: PASS game state doesn't change after not buying card
+	state changed? = 0, expected = 0
+TEST 6: PASS game state does change after buying card
+	state changed? = 0, expected = 0
 TEST SUCCESSFULLY COMPLETED
 File 'dominion.c'
-Lines executed:33.39% of 563
+Lines executed:7.10% of 563
+Branches executed:11.51% of 417
+Taken at least once:4.32% of 417
+Calls executed:6.45% of 93
 Creating 'dominion.c.gcov'
 
 unittest4.c:
-handCard(): PASS smithy in hand when player 1 plays smithy
-handCard(): PASS treasure_map in hand when player 1 plays treasure_map
-handCard(): PASS smithy in hand when player 4 plays smithy
-handCard(): PASS hand array (in game state) changes when player 1 plays smithy
+----------------- Testing function: handCard() ----------------
+TEST 1: PASS smithy in hand when player 1 plays smithy
+	current card in hand= 13, expected = 13
+TEST 2: PASS treasure_map in hand when player 1 plays treasure_map
+	current card in hand= 26, expected = 26
+TEST 3: PASS smithy in hand when player 4 plays smithy
+	current card in hand= 13, expected = 13
+TEST 4: PASS hand array (in game state) changes when player 1 plays smithy
+	game state changed?= 0, expected = 0
 TEST SUCCESSFULLY COMPLETED
 File 'dominion.c'
-Lines executed:33.39% of 563
+Lines executed:7.64% of 563
+Branches executed:11.51% of 417
+Taken at least once:4.32% of 417
+Calls executed:7.53% of 93
 Creating 'dominion.c.gcov'
 
 Result for running Dominion CARD unit tests:
 cardtest1.c:
------------------ Testing Card: smithy ----------------
+----------------- Testing Card: Smithy ----------------
 TEST 1: PASS player 1 received exactly 3 cards
 	hand count = 8, expected = 8
 TEST 2: PASS drawn 3 cards came from player 1's own deck
 	deck count = 2, expected = 2
 TEST 3: PASS player 2's deck and hand count didn't change
 	deck+hand count = 10, expected = 10
-TEST 4: PASS No state change occurred to the victory card piles
+TEST 4: FAIL smithy card wasn't discarded after play
+	discarded?= 0, expected = 1
+TEST 5: PASS No state change occurred to the victory card piles
 	total V cards  = 24, expected = 24
-TEST 5: PASS No state change occurred to the kingdom card piles
+TEST 6: PASS No state change occurred to the kingdom card piles
 	total K cards  = 100, expected = 100
-TEST 6: FAIL smithy card wasn't discarded after play
-discarded?= 0, expected = 1
 TEST FAILED
 File 'dominion.c'
-Lines executed:33.39% of 563
+Lines executed:25.93% of 563
+Branches executed:32.85% of 417
+Taken at least once:17.51% of 417
+Calls executed:18.28% of 93
 Creating 'dominion.c.gcov'
 
 cardtest2.c:
------------------ Testing Card: adventurer ----------------
+----------------- Testing Card: Adventurer ----------------
 TEST 1: FAIL player 1 doesn't have +2 treasure cards in his hand
-	treasure count = 4, expected = 2
+	treasure count = 4, expected = 2 
 	before draw hand count = 5, after draw hand count = 8, expected = 7
 TEST 2: PASS all non-treasure cards drawn were moved to discard pile
 	discarded count = 2, expected >= 0
@@ -77,23 +116,49 @@ TEST 4: PASS No state change occured to player 2's hand and deck piles
 	num of different deck cards = 0, expected = 0
 TEST FAILED
 File 'dominion.c'
-Lines executed:33.39% of 563
+Lines executed:30.73% of 563
+Branches executed:36.69% of 417
+Taken at least once:21.10% of 417
+Calls executed:22.58% of 93
 Creating 'dominion.c.gcov'
 
-cardtest3c:
------------------ Testing Card: village ----------------
+cardtest3.c:
+----------------- Testing Card: Village ----------------
 TEST 1: PASS player 1 draws +1 card from deck
 	deck card count = 4, expected = 4
 TEST 2: PASS player 1 gains +2 actions
 	num of actions = 3, expected = 3
 TEST 3: PASS player 1 discards village card from hand
 	num of playedCards = 1, expected = 1
-	change of cards in hand = 0, expected = 0
-TEST 4: PASS player 1 discards village card from hand
+	final hand count = 5, expected = 5
+TEST 4: PASS no state change occured to other player's deck/hand
 	hand count = 0, expected = 0
 	deck count = 10, expected = 10
 TEST SUCCESSFULLY COMPLETED
 File 'dominion.c'
 Lines executed:33.39% of 563
+Branches executed:38.13% of 417
+Taken at least once:22.06% of 417
+Calls executed:24.73% of 93
+Creating 'dominion.c.gcov'
+
+cardtest4.c:
+----------------- Testing Card: Great Hall ----------------
+TEST 1: PASS player 1 draws +1 card from deck
+	deck card count = 4, expected = 4
+TEST 2: PASS player 1 gains +1 action
+	num of actions = 2, expected = 2
+TEST 3: PASS player 1 discards village card from hand
+	num of playedCards = 1, expected = 1
+	change of cards in hand = 0, expected = 0
+TEST 4: PASS no state change occured to other player's deck/hand
+	hand count = 0, expected = 0
+	deck count = 10, expected = 10
+TEST SUCCESSFULLY COMPLETED
+File 'dominion.c'
+Lines executed:34.10% of 563
+Branches executed:38.13% of 417
+Taken at least once:22.30% of 417
+Calls executed:26.88% of 93
 Creating 'dominion.c.gcov'
 
