@@ -82,9 +82,9 @@ int main(){
     expected[0] = initG.handCount[thisPlayer+1];
     expected[1] = initG.deckCount[thisPlayer+1];
     actual[0] = testG.handCount[thisPlayer+1];
-    actual[0] = testG.deckCount[thisPlayer+1];
+    actual[1] = testG.deckCount[thisPlayer+1];
 
-    if( (actual[0] == expected[0]) && (actual[1] == expected[1])){ 
+    if( (actual[0] == expected[0]) && (actual[1] == expected[1]) ){ 
         printf("TEST 4: PASS no state change occured to other player's deck/hand\n");
         printf("\thand count = %d, expected = %d\n", actual[0], expected[0]);
         printf("\tdeck count = %d, expected = %d\n", actual[1], expected[1]);
