@@ -39,12 +39,12 @@ int main(){
     actual = handCard(smithy, &states[0]);
     expected = smithy;
     if(expected == actual){
-        printf("handCard(): PASS smithy in hand when player 1 plays smithy\n");
+        printf("TEST 1: PASS smithy in hand when player 1 plays smithy\n");
         printf("\tcurrent card in hand= %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
-        printf("handCard(): FAIL smithy not in hand when player 1 plays smithy\n");
+        printf("TEST 1: FAIL smithy not in hand when player 1 plays smithy\n");
         printf("\tcurrent card in hand= %d, expected = %d\n", actual, expected);
     }
 
@@ -52,12 +52,12 @@ int main(){
     actual = handCard(treasure_map, &states[1]);
     expected = treasure_map;
     if(expected == actual){
-        printf("handCard(): PASS treasure_map in hand when player 1 plays treasure_map\n");
+        printf("TEST 2: PASS treasure_map in hand when player 1 plays treasure_map\n");
         printf("\tcurrent card in hand= %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
-        printf("handCard(): FAIL treasure_map not in hand when player 1 plays treasure_map\n");
+        printf("TEST 2: FAIL treasure_map not in hand when player 1 plays treasure_map\n");
         printf("\tcurrent card in hand= %d, expected = %d\n", actual, expected);
     }
 
@@ -65,12 +65,12 @@ int main(){
     actual = handCard(smithy, &states[2]);
     expected = smithy;
     if(expected == actual){
-        printf("handCard(): PASS smithy in hand when player 4 plays smithy\n");
+        printf("TEST 3: PASS smithy in hand when player 4 plays smithy\n");
         printf("\tcurrent card in hand= %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
-        printf("handCard(): FAIL smithy not in hand when player 4 plays smithy\n");
+        printf("TEST 3: FAIL smithy not in hand when player 4 plays smithy\n");
         printf("\tcurrent card in hand= %d, expected = %d\n", actual, expected);
     }
 
@@ -79,12 +79,12 @@ int main(){
     actual = compareGameStates(&states[3], &states[4]);
     expected = 0;
     if(expected == actual){
-        printf("handCard(): PASS hand array (in game state) changes when player 1 plays smithy\n");
+        printf("TEST 4: PASS hand array (in game state) changes when player 1 plays smithy\n");
         printf("\tgame state changed?= %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
-        printf("handCard(): FAIL hand array (in game state) doesn't change when player 1 plays smithy\n");
+        printf("TEST 4: FAIL hand array (in game state) doesn't change when player 1 plays smithy\n");
         printf("\tgame state changed?= %d, expected = %d\n", actual, expected);
     }
 
