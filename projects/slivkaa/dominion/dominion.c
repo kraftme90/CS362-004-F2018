@@ -391,7 +391,6 @@ int isGameOver(struct gameState *state) {
   //if stack of Province cards is empty, the game ends
   if (state->supplyCount[province] == 0)
   {
-    printf("state->supplyCount[province] == 0\n");
     return 1;
   }
 
@@ -406,7 +405,6 @@ int isGameOver(struct gameState *state) {
   }
   if ( j >= 3)
   {
-    printf("j >= 3\n");
     return 1;
   }
 
