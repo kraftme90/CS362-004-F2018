@@ -41,6 +41,8 @@ int main(){
     states[4].handCount[states[4].whoseTurn] = 1;
   
   	printf("----------------- Testing function: %s ----------------\n", TESTFUNC);  
+    
+    /* Test 1 */
     actual = numHandCards(&states[0]);
     expected = 1;
     if(actual == expected){
@@ -53,6 +55,7 @@ int main(){
         printf("\thand count = %d, expected = %d\n", actual, expected);
     }
 
+    /* Test 2 */
     actual = numHandCards(&states[1]);
     expected = 1;
     if(actual == expected){
@@ -65,6 +68,7 @@ int main(){
         printf("\thand count = %d, expected = %d\n", actual, expected);
     }
 
+    /* Test 3 */
     actual = numHandCards(&states[2]);
     expected = 20;
     if(actual == expected){
@@ -77,6 +81,7 @@ int main(){
         printf("\thand count = %d, expected = %d\n", actual, expected);
     }
 
+    /* Test 4 */
     numHandCards(&states[3]);
     actual = compareGameStates(&states[3], &states[4]);
     expected = 0;

@@ -7,11 +7,12 @@
  */
 
 #include "testLib.h"
+#define TESTFUNC "buyCard()"
 
 int main(){
 
     struct gameState states[8];
-    int i, retVal, expVal, numPasses = 0;
+    int i, actual, expected, numPasses = 0;
 
     for(i = 0; i < 8; i++){
         initGameState(&states[i]);
@@ -51,73 +52,85 @@ int main(){
     states[7].phase = 1;
     states[7].discardCount[0]++;
     
+
+    printf("----------------- Testing function: %s ----------------\n", TESTFUNC);  
     /* Test 1 */
-    retVal = buyCard(province, &states[0]);
-    expVal = -1;
-    if(compareInts(expVal, retVal) == 0){
-        printf("buyCard(): PASS card not bought when player's numBuys < 1\n");
+    actual = buyCard(province, &states[0]);
+    expected = -1;
+    if(expected == actual){
+        printf("TEST 1: PASS card not bought when player's numBuys < 1\n");
+        printf("\tcard bought = %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
-        printf("buyCard(): FAIL card bought when player's numBuys < 1\n");
+        printf("TEST 1: FAIL card bought when player's numBuys < 1\n");
+        printf("\tcard bought = %d, expected = %d\n", actual, expected);
     }
 
     /* Test 2 */
-    retVal = buyCard(province, &states[1]);
-    expVal = -1;
-    if(compareInts(expVal, retVal) == 0){
-        printf("buyCard(): PASS card not bought when player's card supply count < 1\n");
+    actual = buyCard(province, &states[1]);
+    expected = -1;
+    if(expected == actual){
+        printf("TEST 2: PASS card not bought when player's card supply count < 1\n");
+        printf("\tcard bought = %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
-        printf("buyCard(): FAIL card bought when player's supply count for card < 1\n");
+        printf("TEST 2: FAIL card bought when player's supply count for card < 1\n");
+        printf("\tcard bought = %d, expected = %d\n", actual, expected);
     }
 
     /* Test 3 */
-    retVal = buyCard(province, &states[2]);
-    expVal = -1;
-    if(compareInts(expVal, retVal) == 0){
-        printf("buyCard(): PASS card not bought when there's not enough money\n");
+    actual = buyCard(province, &states[2]);
+    expected = -1;
+    if(expected == actual){
+        printf("TEST 3: PASS card not bought when there's not enough money\n");
+        printf("\tcard bought = %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
-        printf("buyCard(): FAIL card bought when there's not enough money\n");
+        printf("TEST 3: FAIL card bought when there's not enough money\n");
+        printf("\tcard bought = %d, expected = %d\n", actual, expected);
     }
 
     /* Test 4 */
-    retVal = buyCard(province, &states[3]);
-    expVal = 0;
-    if(compareInts(expVal, retVal) == 0){
-        printf("buyCard(): PASS card bought when there's enough money\n");
+    actual = buyCard(province, &states[3]);
+    expected = 0;
+    if(expected == actual){
+        printf("TEST 4: PASS card bought when there's enough money\n");
+        printf("\tcard bought = %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
-        printf("buyCard(): FAIL card not bought when there's enough money\n");
+        printf("TEST 4: FAIL card not bought when there's enough money\n");
+        printf("\tcard bought = %d, expected = %d\n", actual, expected);
     }
 
     /* Test 5 */
     buyCard(province, &states[4]);
-    retVal = compareGameStates(&states[4], &states[5]);
-    expVal = 0;
-    if(compareInts(expVal, retVal) == 0){
-        printf("buyCard(): PASS game state doesn't change after not buying card\n");
+    actual = compareGameStates(&states[4], &states[5]);
+    expected = 0;
+    if(expected == actual){
+        printf("TEST 5: PASS game state doesn't change after not buying card\n");
+        printf("\tstate changed? = %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
-        printf("buyCard(): FAIL game state does change after not buying card\n");
+        printf("TEST 5: FAIL game state does change after not buying card\n");
+        printf("\tstate changed? = %d, expected = %d\n", actual, expected);
     }
 
     /* Test 6 */
-    retVal = buyCard(province, &states[6]);
-    retVal +=(states[6].supplyCount[province]);
-    retVal +=compareGameStates(&states[6], &states[7]);
-    expVal = 0;
-    if(compareInts(expVal, retVal) == 0){
-        printf("buyCard(): PASS game state does change after buying card\n");
+    actual = buyCard(province, &states[6]);
+    actual +=(states[6].supplyCount[province]);
+    actual +=compareGameStates(&states[6], &states[7]);
+    expected = 0;
+    if(expected == actual){
+        printf("TEST 6: PASS game state does change after buying card\n");
         numPasses++;
     }
     else{
-        printf("buyCard(): FAIL game state doesn't change after buying card\n");
+        printf("TEST 6: FAIL game state doesn't change after buying card\n");
     }
 
     if(numPasses == 6){

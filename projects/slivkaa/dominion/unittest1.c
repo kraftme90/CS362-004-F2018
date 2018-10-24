@@ -33,6 +33,7 @@ int main(){
     states[4].supplyCount[province] = 0;
 
 	printf("----------------- Testing function: %s ----------------\n", TESTFUNC);  
+    /* Test 1 */
     actual = isGameOver(&states[0]);
     expected = 1;
     if(actual == expected){
@@ -45,6 +46,7 @@ int main(){
         printf("\treturn value = %d, expected = %d\n", actual, expected);
     }
    
+   /* Test 2 */
     actual = isGameOver(&states[1]);
     expected = 0;
     if(actual == expected){
@@ -57,6 +59,7 @@ int main(){
         printf("\treturn value = %d, expected = %d\n", actual, expected);
     }
     
+    /* Test 3 */
     actual = isGameOver(&states[2]);
     expected = 1;
     if(actual == expected){
@@ -69,6 +72,7 @@ int main(){
         printf("\treturn value = %d, expected = %d\n", actual, expected);
     }
    
+   /* Test 4 */
     actual = isGameOver(&states[3]);
     expected = 0;
     if(actual == expected){
@@ -81,6 +85,7 @@ int main(){
         printf("\treturn value = %d, expected = %d\n", actual, expected);
     }
    
+    /* Test 5 */
     actual = compareGameStates(&states[4], &states[0]);
     expected = 0;
     if(actual == expected){
