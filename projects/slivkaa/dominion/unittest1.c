@@ -12,7 +12,7 @@
 int main(){
 
     struct gameState states[5];
-    int i, retVal, expVal, numPasses = 0;
+    int i, actual, expected, numPasses = 0;
 
     for(i = 0; i < 25; i++){
         states[0].supplyCount[i] = 1;
@@ -34,9 +34,9 @@ int main(){
 	printf("----------------- Testing function: %s ----------------\n", TESTFUNC);
     // ----------- TEST 1: game over with 0 province cards --------------
    
-    retVal = isGameOver(&states[0]);
-    expVal = 1;
-    if(compareInts(expVal, retVal) == 0){
+    actual = isGameOver(&states[0]);
+    expected = 1;
+    if(actual == expected){
         printf("TEST 1: PASS game over with 0 province cards\n");
         printf("\treturn value = %d, expected = %d\n", actual, expected);
         numPasses++;
@@ -46,9 +46,9 @@ int main(){
         printf("\treturn value = %d, expected = %d\n", actual, expected);
     }
    
-    retVal = isGameOver(&states[1]);
-    expVal = 0;
-    if(compareInts(expVal, retVal) == 0){
+    actual = isGameOver(&states[1]);
+    expected = 0;
+    if(actual == expected){
         printf("TEST 2: PASS game not over with 2 province cards left\n");
         printf("\treturn value = %d, expected = %d\n", actual, expected);
         numPasses++;
@@ -58,9 +58,9 @@ int main(){
         printf("\treturn value = %d, expected = %d\n", actual, expected);
     }
     
-    retVal = isGameOver(&states[2]);
-    expVal = 1;
-     if(compareInts(expVal, retVal) == 0){
+    actual = isGameOver(&states[2]);
+    expected = 1;
+    if(actual == expected){
         printf("TEST 3: PASS game over with 3 supply piles empty\n");
         printf("\treturn value = %d, expected = %d\n", actual, expected);
         numPasses++;
@@ -70,9 +70,9 @@ int main(){
         printf("\treturn value = %d, expected = %d\n", actual, expected);
     }
    
-    retVal = isGameOver(&states[3]);
-    expVal = 0;
-    if(compareInts(expVal, retVal) == 0){
+    actual = isGameOver(&states[3]);
+    expected = 0;
+    if(actual == expected){
         printf("TEST 4: PASS game not over with <3 supply piles empty\n");
         printf("\treturn value = %d, expected = %d\n", actual, expected);
         numPasses++;
