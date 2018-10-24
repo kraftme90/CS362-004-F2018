@@ -52,13 +52,13 @@ int main(){
 	// ----------- TEST 2: player 1 gains +1 actions --------------
     expected[0] = initG.numActions + 1;
     actual[0] = testG.numActions;
-    if(expected == actual){ 
+    if(expected[0] == actual[0]){ 
         printf("TEST 2: PASS player 1 gains +1 action\n");
         printf("\tnum of actions = %d, expected = %d\n", actual[0], expected[0]);
         numPasses++;
     }
     else{
-        printf("TEST 2: FAIL player 1 doesnt' gain +2 actions\n");
+        printf("TEST 2: FAIL player 1 doesnt' gain +1 action\n");
         printf("\tnum of actions = %d, expected = %d\n", actual[0], expected[0]);
     }
 

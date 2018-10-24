@@ -119,12 +119,12 @@ int main(){
     actual = ((initG.playedCardCount + discarded) == testG.playedCardCount) &&  ((initG.handCount[thisPlayer] - discarded)  == testG.handCount[thisPlayer]);
     if(actual == expected){
         printf("TEST 6: PASS smithy card was discarded after play\n");
-        printf("discarded?= %d, expected = %d\n", actual, expected);
+        printf("\tdiscarded?= %d, expected = %d\n", actual, expected);
         numPasses++;
     }
     else{
         printf("TEST 6: FAIL smithy card wasn't discarded after play\n");
-        printf("discarded?= %d, expected = %d\n", actual, expected);
+        printf("\tdiscarded?= %d, expected = %d\n", actual, expected);
     }
 
     if(numPasses == 6){

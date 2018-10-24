@@ -102,6 +102,7 @@ int main(){
     actual[0]= testG.handCount[thisPlayer+1];
     expected[1] = initG.deckCount[thisPlayer+1];
     actual[1] = testG.deckCount[thisPlayer+1];
+    actual[2] = actual[3] = 0;
     if(expected[0] == actual[0]){
         for(i = 0; i < expected[0]; i++){
             if(initG.hand[thisPlayer+1][i] != testG.hand[thisPlayer+1][i]){
