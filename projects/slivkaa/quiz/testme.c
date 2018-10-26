@@ -5,15 +5,15 @@
 
 char inputChar()
 {
-    char keyList[10] = "[({ ax})]";
-    int idx = rand() % 9;
+    char keyList[] = "[({ ax})]bcdefghijklmnopqrstuv";
+    int idx = rand() % (strlen(keyList));
     return keyList[idx];
 }
 
 char *inputString()
 {
     // TODO: rewrite this function
-    char searchStr[] = "resetRST";
+    char searchStr[] = "resetRESET";
     char* randStr = calloc(6, sizeof(char));
     int i, idx;
     for(i = 0; i < 5; i++){
