@@ -3,8 +3,6 @@
 #include<stdlib.h>
 #include<time.h>
 
-char* targetStr;
-
 char inputChar()
 {
     char keyList[10] = "[({ ax})]";
@@ -15,9 +13,15 @@ char inputChar()
 char *inputString()
 {
     // TODO: rewrite this function
-    char* targetStr = calloc(6, sizeof(char));
-    strcpy(targetStr, "reset");
-    return targetStr;
+    char searchStr[] = "reset";
+    char* randStr = calloc(6, sizeof(char));
+    int i, idx;
+    for(i = 0; i < 6; i++){
+        idx = rand() % (strlen(searchStr) + 1);
+        strcat(randStr, &searchStr[idx]);
+        printf("string: %s", randStr);
+    }
+    return randStr;
 }
 
 void testme()
