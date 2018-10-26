@@ -17,7 +17,7 @@ char *inputString()
     char* randStr = calloc(6, sizeof(char));
     int i, idx;
     for(i = 0; i < 5; i++){
-        idx = rand() % 5;
+        idx = rand() % 10;
         randStr[i] = searchStr[idx];
     }
     printf("string: %s\n", randStr);
