@@ -13,7 +13,7 @@ char inputChar()
 char *inputString()
 {
     // TODO: rewrite this function
-    char searchStr[] = "resetRESET";
+    char searchStr[] = "resetRST";
     char* randStr = calloc(6, sizeof(char));
     int i, idx;
     for(i = 0; i < 5; i++){
