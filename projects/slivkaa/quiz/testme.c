@@ -15,7 +15,7 @@ char inputChar()
 char *inputString()
 {
     // TODO: rewrite this function
-    char* targetStr = calloc(6 * sizeof(char));
+    char* targetStr = calloc(6, sizeof(char));
     strcpy(targetStr, "reset");
     return targetStr;
 }
@@ -50,7 +50,7 @@ void testme()
       printf("error ");
       exit(200);
     }
-    
+
     free(s);
   }
 }
