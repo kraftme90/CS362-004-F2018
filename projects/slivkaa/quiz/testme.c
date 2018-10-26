@@ -18,7 +18,7 @@ char *inputString()
     int i, idx;
     for(i = 0; i < 5; i++){
         idx = rand() % (strlen(searchStr) + 1);
-        strcat(randStr, &searchStr[idx]);
+        randStr[i] = searchStr[idx];
         printf("string: %s\n", randStr);
     }
     randStr[5] = '\0';  /*Null terminating string */
