@@ -5,7 +5,7 @@
 
 char inputChar()
 {
-    char keyList[] = "[({ ax})]bcdefghijklmnopqrstuv";
+    char keyList[] = " [](){}abcdefghijklmnopqrstuvxyz";
     int idx = rand() % (strlen(keyList));
     return keyList[idx];
 }
