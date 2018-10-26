@@ -6,7 +6,7 @@
 char inputChar()
 {
     char keyList[10] = "[({ ax})]";
-    int idx = rand() % (strlen(keyList) + 1);
+    int idx = rand() % 9;
     return keyList[idx];
 }
 
@@ -17,7 +17,7 @@ char *inputString()
     char* randStr = calloc(6, sizeof(char));
     int i, idx;
     for(i = 0; i < 5; i++){
-        idx = rand() % (strlen(searchStr) + 1);
+        idx = rand() % 5;
         randStr[i] = searchStr[idx];
     }
     printf("string: %s\n", randStr);
