@@ -17,10 +17,10 @@ char *inputString()
     char* randStr = calloc(6, sizeof(char));
     int i, idx;
     for(i = 0; i < 5; i++){
-        idx = rand() % 10;
+        idx = rand() % 8;
         randStr[i] = searchStr[idx];
     }
-    printf("string: %s\n", randStr);
+    // printf("string: %s\n", randStr);
     randStr[5] = '\0';  /*Null terminating string */
     return randStr;
 }
