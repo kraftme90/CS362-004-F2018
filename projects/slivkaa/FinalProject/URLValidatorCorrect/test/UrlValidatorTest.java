@@ -85,6 +85,7 @@ protected void setUp() {
 	      //UrlValidator urlVal = new UrlValidator(null, allowAllSchemes);
       assertTrue(urlVal.isValid("http://www.google.com"));
       assertTrue(urlVal.isValid("http://www.google.com/"));
+      
       int statusPerLine = 60;
       int printed = 0;
       if (printIndex)  {
@@ -189,7 +190,9 @@ protected void setUp() {
       fct.setUp();
       fct.testIsValid();
       fct.testIsValidScheme();
+
    }
+   
    //-------------------- Test data for creating a composite URL
    /**
     * The data given below approximates the 4 parts of a URL
@@ -279,6 +282,5 @@ protected void setUp() {
                             new ResultPair("ftp", false),
                             new ResultPair("httpd", false),
                             new ResultPair("telnet", false)};
-
 
 }
