@@ -1,8 +1,14 @@
 /*******************************************************************************
 * Author: Riley Kraft (kraftme)
 * Date: 10/28/2018
-* Desccription:
+* Description: This program is a unit test suite for the Salvager card of the 
+* 				dominion.c file. When run, this will test for the correct
+* 				outcome of this function in regards to the gameState, player,
+* 				opponent, and supply cards. See test titles for more information.
 * Sources:
+* 	Assignment 3 Assistance (1) bst_assgn3.zip
+* 	Assignment 3 Assistance (2) testUpdateCoins.c
+* 	Assignment 3: Test something vs Testing for business rules cardtest4.c
 * 	https://stackoverflow.com/questions/3585846/color-text-in-terminal-applications-in-unix
 *******************************************************************************/
 #include <stdlib.h>
