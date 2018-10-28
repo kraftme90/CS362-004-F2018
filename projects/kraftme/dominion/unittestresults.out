@@ -3,7 +3,7 @@
 
 TEST-1: return value = 0
 PASS
-TEST-2: coins = 8
+TEST-2: new coins = coins + value of Treausure cards in hand + bonus
 PASS
 TEST-3: currentPlayer's handCount didn't change
 PASS
@@ -356,7 +356,7 @@ TEST-10: opponent's fullDeckCount didn't change
 PASS
 TEST-11: playedCardCount didn't change
 PASS
-TEST-12: numPlayers stayed the same
+TEST-12: numPlayers didn't change
 PASS
 TEST-13: still currentPlayer's turn
 PASS
@@ -1139,17 +1139,17 @@ TEST-9: last played card was Adventurer
 FAIL: last playedCard was not Adventurer
 TEST-10: Last discarded card was the Non-Treasure drawn card
 PASS
-TEST-11: numPlayers stayed the same
+TEST-11: numPlayers didn't change
 PASS
 TEST-12: still currentPlayer's turn
 PASS
-TEST-13: game phase stayed the same
+TEST-13: game phase didn't change
 PASS
-TEST-14: numActions stayed the same
+TEST-14: numActions didn't change
 PASS
 TEST-15: numBuys didn't change
 PASS
-TEST-16: currentPlayer's coins stayed the same
+TEST-16: currentPlayer's coins didn't change
 PASS
 TEST-17: opponent's handCount didn't change
 PASS
@@ -1352,17 +1352,17 @@ TEST-7: playedCardCount + 1
 PASS
 TEST-8: last played card was Smithy
 PASS
-TEST-9: numPlayers stayed the same
+TEST-9: numPlayers didn't change
 PASS
 TEST-10: still currentPlayer's turn
 PASS
-TEST-11: game phase stayed the same
+TEST-11: game phase didn't change
 PASS
-TEST-12: numActions stayed the same
+TEST-12: numActions didn't change
 PASS
 TEST-13: numBuys didn't change
 PASS
-TEST-14: currentPlayer's coins stayed the same
+TEST-14: currentPlayer's coins didn't change
 PASS
 TEST-15: opponent's handCount didn't change
 PASS
@@ -1565,13 +1565,13 @@ TEST-7: playedCardCount + 1
 PASS
 TEST-8: last played card was Salvager
 PASS
-TEST-9: numPlayers stayed the same
+TEST-9: numPlayers didn't change
 PASS
 TEST-10: still currentPlayer's turn
 PASS
-TEST-11: game phase stayed the same
+TEST-11: game phase didn't change
 PASS
-TEST-12: numActions stayed the same
+TEST-12: numActions didn't change
 PASS
 TEST-13: numBuys + 1
 PASS
@@ -1776,17 +1776,17 @@ TEST-7: playedCardCount + 1
 FAIL: playedCardCount changed from 0 to 0
 TEST-8: last played card was Sea Hag
 FAIL: last playedCard was not Sea Hag
-TEST-9: numPlayers stayed the same
+TEST-9: numPlayers didn't change
 PASS
 TEST-10: still currentPlayer's turn
 PASS
-TEST-11: game phase stayed the same
+TEST-11: game phase didn't change
 PASS
-TEST-12: numActions stayed the same
+TEST-12: numActions didn't change
 PASS
 TEST-13: numBuys didn't change
 PASS
-TEST-14: currentPlayer's coins stayed the same
+TEST-14: currentPlayer's coins didn't change
 PASS
 TEST-15: opponent's handCount didn't change
 PASS

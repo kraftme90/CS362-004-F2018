@@ -102,7 +102,7 @@ int main(){
 	else
 		printf( "FAIL: return value = %d" , returnValue);
 	
-	printf("\nTEST-2: coins = 8\n");
+	printf("\nTEST-2: new coins = coins + value of Treausure cards in hand + bonus\n");
 	if(G.coins == coins + 8)
 		printf( "PASS" );
 	else

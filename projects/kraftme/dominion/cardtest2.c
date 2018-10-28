@@ -145,7 +145,7 @@ int main ()	{
 	else
 		printf(  "FAIL: last playedCard was not Smithy"  );
 	
-	printf("\nTEST-9: numPlayers stayed the same\n");
+	printf("\nTEST-9: numPlayers didn't change\n");
 	if(G.numPlayers == numPlayers)
 		printf(  "PASS"  );
 	else
@@ -157,13 +157,13 @@ int main ()	{
 	else
 		printf(  "FAIL: whoseTurn changed from %d to %d"  , currentPlayer, G.whoseTurn);
 		
-	printf("\nTEST-11: game phase stayed the same\n");
+	printf("\nTEST-11: game phase didn't change\n");
 	if(G.phase == phase)
 		printf(  "PASS"  );
 	else
 		printf(  "FAIL: game phase changed from %d to %d"  , phase, G.phase);
 		
-	printf("\nTEST-12: numActions stayed the same\n");
+	printf("\nTEST-12: numActions didn't change\n");
 	if(G.numActions == numActions)
 		printf(  "PASS"  );
 	else
@@ -175,7 +175,7 @@ int main ()	{
 	else
 		printf(  "FAIL: numBuys changed from %d to %d"  , numBuys, G.numBuys);
 	
-	printf("\nTEST-14: currentPlayer's coins stayed the same\n");
+	printf("\nTEST-14: currentPlayer's coins didn't change\n");
 	if(G.coins == coins)
 		printf(  "PASS"  );
 	else

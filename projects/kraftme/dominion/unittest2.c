@@ -222,7 +222,7 @@ int main(){
 	else
 		printf( "FAIL: playedCardCount changed from %d to %d" , playedCardCount, G.playedCardCount);
 	
-	printf("\nTEST-12: numPlayers stayed the same\n");
+	printf("\nTEST-12: numPlayers didn't change\n");
 	if(G.numPlayers == numPlayers)
 		printf( "PASS" );
 	else
