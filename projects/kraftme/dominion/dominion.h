@@ -131,7 +131,7 @@ int getWinners(int players[MAX_PLAYERS], struct gameState *state);
 int getAdventurer(struct gameState *state, int currentPlayer, int *temphand);
 int getSmithy(struct gameState *state, int currentPlayer, int handPos);
 int getSalvager(int choice1, struct gameState *state, int currentPlayer, int handPos);
-int getSeaHag(struct gameState *state, int currentPlayer);
+int getSeaHag(struct gameState *state, int currentPlayer, int handPos);
 int getTreasureMap(struct gameState *state, int currentPlayer, int handPos);
 
 #endif

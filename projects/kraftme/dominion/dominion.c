@@ -1138,7 +1138,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
     	return getSalvager(choice1, state, currentPlayer, handPos);
 		
     case sea_hag:
-    	return getSeaHag(state, currentPlayer);
+    	return getSeaHag(state, currentPlayer, handPos);
 		
     case treasure_map:
     	return getTreasureMap(state, currentPlayer, handPos);
@@ -1151,12 +1151,11 @@ int discardCard(int handPos, int currentPlayer, struct gameState *state, int tra
 {
 	
   //if card is not trashed, added to Played pile 
-  if (trashFlag < 1)
-    {
+  if (trashFlag < 1){
       //add card to played pile
       state->playedCards[state->playedCardCount] = state->hand[currentPlayer][handPos]; 
       state->playedCardCount++;
-    }
+  }
 	
   //set played card to -1
   state->hand[currentPlayer][handPos] = -1;
@@ -1268,11 +1267,12 @@ int getAdventurer(struct gameState *state, int currentPlayer, int *temphand){
 	    	state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
 	    }
 	}
-	while(z-1>=0){
+	while(z-1 >= 0){
 		// Discard all cards in play that have been drawn
 		state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1];
 	    z=z-1;
 	}
+	//discardCard(handPos, currentPlayer, state, 0);  // BUG: need to discard Adventurer
 	return 0;
 }
 
@@ -1303,15 +1303,18 @@ int getSalvager(int choice1, struct gameState *state, int currentPlayer, int han
 	return 0;
 }
 
-int getSeaHag(struct gameState *state, int currentPlayer){
+int getSeaHag(struct gameState *state, int currentPlayer, int handPos){
 	for (int i = 0; i < state->numPlayers; i++){
 		if (i == currentPlayer){                    // BUG: incorrect equality, should be !=
-			state->discard[i][state->discardCount[i]] = state->deck[i][state->deckCount[i]--];			    
-			state->deckCount[i]--;
+			state->discard[i][state->discardCount[i]] = state->deck[i][state->deckCount[i]--];	// BUG: should be -1, not --		    
+			state->deckCount[i]--; // BUG: not needed
 	    	state->discardCount[i]++;
-	    	state->deck[i][state->deckCount[i]--] = curse; //Top card now a curse
+	    	state->deck[i][state->deckCount[i]--] = curse; //Top card now a curse; BUG: should be -1, not --
+	    	//state->supplyCount[curse]--; // BUG: need to take curse from game supply
 	    }
 	}
+	
+	//discardCard(handPos, currentPlayer, state, 0); // BUG: need to discard Sea Hag
 	return 0;
 }
 
