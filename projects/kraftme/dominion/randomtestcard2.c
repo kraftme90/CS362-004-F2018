@@ -95,7 +95,7 @@ int main ()	{
 
 		//set player decks
 		for (i = 0; i < numPlayers; i++){
-		  G.deckCount[i] = randNum(8,25);        // have at least 3 cards to draw
+		  G.deckCount[i] = randNum(2,20);        // have at least 3 cards to draw
 		  for (j = 0; j < randNum(0,G.deckCount[i]); j++){
 			  G.deck[i][j] = randNum(0, 6);  // curse to gold
 		  }
@@ -115,10 +115,10 @@ int main ()	{
 	  	//draw player hands
 	  	for (i = 0; i < numPlayers; i++){  
 		  G.handCount[i] = 0;      // Must at least have a Salvager card and a card to trash
-		  G.discardCount[i] = randNum(0,5);
+		  G.discardCount[i] = 0;
 		  
 		  //printf("Player %d hand: ", i);
-		  for (j = 0; j < randNum(1,5); j++){
+		  for (j = 0; j < randNum(1,G.deckCount[i]); j++){
 			  drawCard(i, &G);
 			  //printf("%d, ", G.hand[i][j]);
 		  }
@@ -254,7 +254,8 @@ int main ()	{
 				   testG.deck[i][testG.deckCount[i]-3] != G.deck[i][G.deckCount[i]-3]){
 					++index;
 					printf(  "TEST-17 FAIL: cards from top of opponent %d's deck changed\n", i  );
-					//printf("top of deck: %d, %d, %d", testG.deck[i][testG.deckCount[i]-1], testG.deck[i][testG.deckCount[i]-2], testG.deck[i][testG.deckCount[i]-3]);
+					printf("then: %d, %d, %d\n", G.deck[i][G.deckCount[i]-1], G.deck[i][G.deckCount[i]-2], G.deck[i][G.deckCount[i]-3]);
+					printf("now: %d, %d, %d\n", testG.deck[i][testG.deckCount[i]-1], testG.deck[i][testG.deckCount[i]-2], testG.deck[i][testG.deckCount[i]-3]);
 				}
 				
 				//printf("\nTEST-18: opponent's discardCount didn't change\n");

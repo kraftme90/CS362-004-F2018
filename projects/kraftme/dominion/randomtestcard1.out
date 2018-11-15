@@ -1,0 +1,549 @@
+
+--------------- Begin Salvager Random Tests ---------------
+Iteration - 1
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 6 to 6
+
+Iteration - 2
+TEST-2 FAIL: handCount changed from 3 to 2
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 4 to 4
+
+Iteration - 3
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 6 to 6
+
+Iteration - 4
+TEST-14 FAIL: currentPlayer's coins changed from 2 to -3
+
+Iteration - 5
+TEST-14 FAIL: currentPlayer's coins changed from 2 to -1
+
+Iteration - 6
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 0
+
+Iteration - 7
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+
+Iteration - 8
+TEST-14 FAIL: currentPlayer's coins changed from 3 to -1
+
+Iteration - 9
+TEST-14 FAIL: currentPlayer's coins changed from 4 to -1
+
+Iteration - 10
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+TEST-14 FAIL: currentPlayer's coins changed from 2 to -2
+
+Iteration - 11
+TEST-2 FAIL: handCount changed from 7 to 6
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 1 to 1
+
+Iteration - 12
+TEST-14 FAIL: currentPlayer's coins changed from 6 to 2
+
+Iteration - 13
+TEST-2 FAIL: handCount changed from 5 to 4
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 0 to 0
+
+Iteration - 14
+TEST-14 FAIL: currentPlayer's coins changed from 4 to -1
+
+Iteration - 15
+TEST-14 FAIL: currentPlayer's coins changed from 3 to -3
+
+Iteration - 16
+TEST-2 FAIL: handCount changed from 4 to 3
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 3 to 3
+
+Iteration - 17
+TEST-2 FAIL: handCount changed from 4 to 3
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 7 to 7
+
+Iteration - 18
+TEST-14 FAIL: currentPlayer's coins changed from 1 to -7
+
+Iteration - 19
+TEST-2 FAIL: handCount changed from 3 to 2
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 0 to 0
+
+Iteration - 20
+TEST-14 FAIL: currentPlayer's coins changed from 0 to -2
+
+Iteration - 21
+TEST-14 FAIL: currentPlayer's coins changed from 3 to -3
+
+Iteration - 22
+TEST-14 FAIL: currentPlayer's coins changed from 5 to -1
+
+Iteration - 23
+TEST-2 FAIL: handCount changed from 5 to 4
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 6 to 6
+
+Iteration - 24
+TEST-14 FAIL: currentPlayer's coins changed from 10 to 5
+
+Iteration - 25
+All tests PASSED
+
+Iteration - 26
+TEST-14 FAIL: currentPlayer's coins changed from 4 to -1
+
+Iteration - 27
+TEST-2 FAIL: handCount changed from 3 to 2
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 9 to 9
+
+Iteration - 28
+TEST-14 FAIL: currentPlayer's coins changed from 0 to -4
+
+Iteration - 29
+TEST-14 FAIL: currentPlayer's coins changed from 0 to -5
+
+Iteration - 30
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+TEST-14 FAIL: currentPlayer's coins changed from 7 to 4
+
+Iteration - 31
+TEST-2 FAIL: handCount changed from 4 to 3
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+
+Iteration - 32
+TEST-14 FAIL: currentPlayer's coins changed from 3 to -1
+
+Iteration - 33
+TEST-14 FAIL: currentPlayer's coins changed from 2 to -6
+
+Iteration - 34
+TEST-2 FAIL: handCount changed from 5 to 4
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 1 to 1
+
+Iteration - 35
+TEST-2 FAIL: handCount changed from 4 to 3
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+
+Iteration - 36
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 0
+
+Iteration - 37
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+TEST-14 FAIL: currentPlayer's coins changed from 4 to 0
+
+Iteration - 38
+TEST-14 FAIL: currentPlayer's coins changed from 2 to -3
+
+Iteration - 39
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 0
+
+Iteration - 40
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+TEST-14 FAIL: currentPlayer's coins changed from 3 to -2
+
+Iteration - 41
+TEST-2 FAIL: handCount changed from 5 to 4
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 4 to 4
+
+Iteration - 42
+TEST-14 FAIL: currentPlayer's coins changed from 7 to 4
+
+Iteration - 43
+TEST-2 FAIL: handCount changed from 5 to 4
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 4 to 4
+
+Iteration - 44
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 1
+
+Iteration - 45
+TEST-14 FAIL: currentPlayer's coins changed from 4 to 1
+
+Iteration - 46
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 0
+
+Iteration - 47
+TEST-14 FAIL: currentPlayer's coins changed from 0 to -4
+
+Iteration - 48
+TEST-2 FAIL: handCount changed from 3 to 2
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 3 to 3
+
+Iteration - 49
+TEST-2 FAIL: handCount changed from 5 to 4
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 8 to 8
+
+Iteration - 50
+TEST-14 FAIL: currentPlayer's coins changed from 3 to -2
+
+Iteration - 51
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 0
+
+Iteration - 52
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 5
+
+Iteration - 53
+TEST-14 FAIL: currentPlayer's coins changed from 11 to 5
+
+Iteration - 54
+TEST-14 FAIL: currentPlayer's coins changed from 0 to -5
+
+Iteration - 55
+TEST-2 FAIL: handCount changed from 6 to 5
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 3 to 3
+
+Iteration - 56
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 0
+
+Iteration - 57
+TEST-14 FAIL: currentPlayer's coins changed from 2 to -1
+
+Iteration - 58
+TEST-2 FAIL: handCount changed from 7 to 6
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 4 to 4
+
+Iteration - 59
+TEST-2 FAIL: handCount changed from 4 to 3
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 0 to 0
+
+Iteration - 60
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 0
+
+Iteration - 61
+TEST-14 FAIL: currentPlayer's coins changed from 2 to -6
+
+Iteration - 62
+TEST-2 FAIL: handCount changed from 4 to 3
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 6 to 6
+
+Iteration - 63
+TEST-14 FAIL: currentPlayer's coins changed from 3 to -2
+
+Iteration - 64
+TEST-2 FAIL: handCount changed from 3 to 2
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 1 to 1
+
+Iteration - 65
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+TEST-14 FAIL: currentPlayer's coins changed from 3 to -2
+
+Iteration - 66
+TEST-14 FAIL: currentPlayer's coins changed from 3 to -2
+
+Iteration - 67
+TEST-14 FAIL: currentPlayer's coins changed from 4 to 0
+
+Iteration - 68
+TEST-14 FAIL: currentPlayer's coins changed from 2 to -3
+
+Iteration - 69
+TEST-14 FAIL: currentPlayer's coins changed from 3 to -3
+
+Iteration - 70
+TEST-2 FAIL: handCount changed from 4 to 3
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+
+Iteration - 71
+TEST-14 FAIL: currentPlayer's coins changed from 6 to 0
+
+Iteration - 72
+TEST-14 FAIL: currentPlayer's coins changed from 4 to 0
+
+Iteration - 73
+TEST-14 FAIL: currentPlayer's coins changed from 4 to 0
+
+Iteration - 74
+TEST-2 FAIL: handCount changed from 3 to 2
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+
+Iteration - 75
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 5
+
+Iteration - 76
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+TEST-14 FAIL: currentPlayer's coins changed from 3 to -3
+
+Iteration - 77
+TEST-14 FAIL: currentPlayer's coins changed from 4 to 1
+
+Iteration - 78
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 5
+
+Iteration - 79
+TEST-14 FAIL: currentPlayer's coins changed from 3 to -3
+
+Iteration - 80
+TEST-14 FAIL: currentPlayer's coins changed from 7 to 4
+
+Iteration - 81
+TEST-2 FAIL: handCount changed from 5 to 4
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 1 to 1
+
+Iteration - 82
+TEST-14 FAIL: currentPlayer's coins changed from 0 to -5
+
+Iteration - 83
+TEST-14 FAIL: currentPlayer's coins changed from 3 to -2
+
+Iteration - 84
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+TEST-14 FAIL: currentPlayer's coins changed from 6 to 1
+
+Iteration - 85
+TEST-2 FAIL: handCount changed from 4 to 3
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 3 to 3
+
+Iteration - 86
+TEST-14 FAIL: currentPlayer's coins changed from 4 to 0
+
+Iteration - 87
+TEST-14 FAIL: currentPlayer's coins changed from 7 to 4
+
+Iteration - 88
+TEST-2 FAIL: handCount changed from 4 to 3
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 6 to 6
+
+Iteration - 89
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 1
+
+Iteration - 90
+TEST-14 FAIL: currentPlayer's coins changed from 0 to -4
+
+Iteration - 91
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 1
+
+Iteration - 92
+TEST-14 FAIL: currentPlayer's coins changed from 7 to 1
+
+Iteration - 93
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 5
+
+Iteration - 94
+TEST-2 FAIL: handCount changed from 6 to 5
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 6 to 6
+
+Iteration - 95
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 0
+
+Iteration - 96
+TEST-14 FAIL: currentPlayer's coins changed from 3 to -1
+
+Iteration - 97
+TEST-14 FAIL: currentPlayer's coins changed from 2 to 0
+
+Iteration - 98
+TEST-14 FAIL: currentPlayer's coins changed from 0 to -4
+
+Iteration - 99
+TEST-14 FAIL: currentPlayer's coins changed from 8 to 2
+
+Iteration - 100
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 2
+
+---------------- End Salvager Random Tests ----------------
+
+Function 'getTreasureMap'
+Lines executed:0.00% of 13
+Branches executed:0.00% of 10
+Taken at least once:0.00% of 10
+Calls executed:0.00% of 3
+
+Function 'getSeaHag'
+Lines executed:0.00% of 8
+Branches executed:0.00% of 4
+Taken at least once:0.00% of 4
+No calls
+
+Function 'getSalvager'
+Lines executed:100.00% of 7
+Branches executed:100.00% of 2
+Taken at least once:100.00% of 2
+Calls executed:100.00% of 4
+
+Function 'getSmithy'
+Lines executed:100.00% of 5
+Branches executed:100.00% of 2
+Taken at least once:100.00% of 2
+Calls executed:100.00% of 2
+
+Function 'getAdventurer'
+Lines executed:100.00% of 16
+Branches executed:100.00% of 12
+Taken at least once:100.00% of 12
+Calls executed:100.00% of 2
+
+Function 'updateCoins'
+Lines executed:100.00% of 11
+Branches executed:100.00% of 8
+Taken at least once:100.00% of 8
+No calls
+
+Function 'gainCard'
+Lines executed:0.00% of 13
+Branches executed:0.00% of 6
+Taken at least once:0.00% of 6
+Calls executed:0.00% of 1
+
+Function 'discardCard'
+Lines executed:92.31% of 13
+Branches executed:100.00% of 6
+Taken at least once:83.33% of 6
+No calls
+
+Function 'cardEffect'
+Lines executed:5.08% of 197
+Branches executed:13.61% of 169
+Taken at least once:2.96% of 169
+Calls executed:6.90% of 58
+
+Function 'getCost'
+Lines executed:63.33% of 30
+Branches executed:100.00% of 28
+Taken at least once:60.71% of 28
+No calls
+
+Function 'drawCard'
+Lines executed:100.00% of 22
+Branches executed:100.00% of 6
+Taken at least once:100.00% of 6
+Calls executed:100.00% of 1
+
+Function 'getWinners'
+Lines executed:0.00% of 24
+Branches executed:0.00% of 22
+Taken at least once:0.00% of 22
+Calls executed:0.00% of 2
+
+Function 'scoreFor'
+Lines executed:0.00% of 24
+Branches executed:0.00% of 42
+Taken at least once:0.00% of 42
+Calls executed:0.00% of 3
+
+Function 'isGameOver'
+Lines executed:0.00% of 10
+Branches executed:0.00% of 8
+Taken at least once:0.00% of 8
+No calls
+
+Function 'endTurn'
+Lines executed:0.00% of 20
+Branches executed:0.00% of 6
+Taken at least once:0.00% of 6
+Calls executed:0.00% of 3
+
+Function 'whoseTurn'
+Lines executed:100.00% of 2
+No branches
+No calls
+
+Function 'fullDeckCount'
+Lines executed:0.00% of 9
+Branches executed:0.00% of 12
+Taken at least once:0.00% of 12
+No calls
+
+Function 'supplyCount'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function 'handCard'
+Lines executed:100.00% of 3
+No branches
+Calls executed:100.00% of 1
+
+Function 'numHandCards'
+Lines executed:0.00% of 2
+No branches
+Calls executed:0.00% of 1
+
+Function 'buyCard'
+Lines executed:0.00% of 13
+Branches executed:0.00% of 6
+Taken at least once:0.00% of 6
+Calls executed:0.00% of 4
+
+Function 'playCard'
+Lines executed:0.00% of 14
+Branches executed:0.00% of 10
+Taken at least once:0.00% of 10
+Calls executed:0.00% of 3
+
+Function 'shuffle'
+Lines executed:100.00% of 16
+Branches executed:100.00% of 8
+Taken at least once:100.00% of 8
+Calls executed:100.00% of 2
+
+Function 'initializeGame'
+Lines executed:0.00% of 62
+Branches executed:0.00% of 46
+Taken at least once:0.00% of 46
+Calls executed:0.00% of 5
+
+Function 'kingdomCards'
+Lines executed:0.00% of 13
+No branches
+No calls
+
+Function 'newGame'
+Lines executed:0.00% of 3
+No branches
+No calls
+
+Function 'compare'
+Lines executed:100.00% of 6
+Branches executed:100.00% of 4
+Taken at least once:100.00% of 4
+No calls
+
+File 'dominion.c'
+Lines executed:23.12% of 558
+Branches executed:23.74% of 417
+Taken at least once:16.55% of 417
+Calls executed:16.84% of 95
+Creating 'dominion.c.gcov'
+

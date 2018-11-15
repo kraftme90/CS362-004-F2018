@@ -99,7 +99,7 @@ int main ()	{
 
 		//set player decks
 		for (i = 0; i < numPlayers; i++){
-		  G.deckCount[i] = randNum(7,25);
+		  G.deckCount[i] = randNum(4,20);
 		  for (j = 0; j < randNum(0,G.deckCount[i]); j++){
 			  G.deck[i][j] = randNum(0, 6);  // curse to gold
 		  }
@@ -122,7 +122,7 @@ int main ()	{
 		  G.discardCount[i] = randNum(0,5);
 		  
 		  //printf("Player %d hand: ", i);
-		  for (j = 0; j < randNum(2,10); j++){
+		  for (j = 0; j < randNum(2,G.deckCount[i]); j++){
 			  drawCard(i, &G);
 			  //printf("%d, ", G.hand[i][j]);
 		  }
