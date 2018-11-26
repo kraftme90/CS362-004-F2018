@@ -1,3 +1,9 @@
+/* Authors: Riley Kraft (kraftme), Artem Slivka (slivkaa), Andrew Tjossem (tjossema)
+ * CS-362-400-F2018
+ * Date: 11/30/2018
+ * Sources:
+ * 	ResultPairs from UrlValidatorTest.java from UrlValidatorCorrect
+ */
 
 
 import junit.framework.TestCase;
@@ -132,12 +138,7 @@ public void testIsValid(){
 	   file.println();
 	   file.println("--------------------- Test Default Params ---------------------");
 	   
-	   try {
-		   urlVal = new UrlValidator();
-	   }
-	   catch(Exception | Error e) {
-		   file.println("FAIL: initializing urlVal caused "+e);
-	   }
+	   urlVal = new UrlValidator();
 	   testUrlScheme[3].valid = false;
 	   tests(urlVal, false, file);
 	   testUrlScheme[3].valid = true;
@@ -339,7 +340,7 @@ public void testIsValid(){
    };
    
    ResultPair[] testUrlQuery = {new ResultPair("", true),
-		   new ResultPair("?action=view", true),
+		   new ResultPair("?action*view", false),
            new ResultPair("?action=edit&mode=up", true)
    };
 
