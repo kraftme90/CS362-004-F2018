@@ -24,11 +24,34 @@ public class UrlValidatorTest extends TestCase {
    }
 
    
- //You can use this function to implement your manual testing	
+ /* Function that implements Manual Testing */
    public void testManualTest()
    {
-   
-	   
+   	UrlValidator urlVal = new UrlValidator(null,null,UrlValidator.ALLOW_ALL_SCHEMES);
+	String[] validURLS = {	"http://www.ed.gov",			//standard web address
+			   	"http://www.gov.uk",			//different top level domain
+			   	"http://www.oregonstate.edu",		//different top level domain
+			   	"http://www.amazon.com",		//different top level domain
+			   	"http://www.mail.google.com",		//standard web address
+			   	"http://mail.google.com",		//removed www.
+			   	"www.mail.google.com",			//removed protocol
+			   	"http://www.mail.google.com/mail",	//added path
+			   	"http://www.mail.google.com/mail/u",	//additional directory
+			   	"https://mail.google.com",		//protocol change
+			   	"http://www.mail.google.com:55443"	//added port number
+	   };
+	  
+	 String[] invalidURLS = {"ioce;\\mmm.sometjh,cas/\"",		//clearly incorrect address
+			   	"mail.google.com",			//removed scheme
+			   	"http://www.wikipedia",			//removed top level domain
+			   	"http://.com",				//removed site name
+			   	"http://www.mail google.com",		//added space in address
+			   	"http;//www.mail.google.com",		//semi-colon after scheme
+			   	"http://www.",				//removed end of url
+			   	".com/path"				//removed first half of url
+	   };
+	   printTestResults(urlVal,validURLS,"Manual 1: Valid URLS");
+	   printTestResults(urlVal,invalidURLS, "Manual 2: Invalid URLS");  
    }
     
    /*
