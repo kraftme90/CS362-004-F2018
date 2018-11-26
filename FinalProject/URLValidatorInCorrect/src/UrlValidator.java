@@ -164,7 +164,7 @@ public class UrlValidator implements Serializable {
      */
     private static final int PARSE_AUTHORITY_EXTRA = 4;
 
-    private static final String PATH_REGEX = "^(/[-\\w:@&?=+,.!*'%$_;\\(\\)]*)?$";
+    private static final String PATH_REGEX = "^(/[-\\w:@&?=+,.!*'%$_;\\(\\)]*)?$";            // BUG: missing /~
     private static final Pattern PATH_PATTERN = Pattern.compile(PATH_REGEX);
 
     private static final String QUERY_REGEX = "^(\\S*)$";
@@ -209,7 +209,7 @@ public class UrlValidator implements Serializable {
     /**
      * Create a UrlValidator with default properties.
      */
-    public UrlValidator() {
+    public UrlValidator() {   // DONE
         this(null);
     }
 
@@ -221,7 +221,7 @@ public class UrlValidator implements Serializable {
      *        be specified. Setting the ALLOW_ALL_SCHEMES option will
      *        ignore the contents of schemes.
      */
-    public UrlValidator(String[] schemes) {
+    public UrlValidator(String[] schemes) {  // DONE
         this(schemes, 0L);
     }
 
@@ -231,7 +231,7 @@ public class UrlValidator implements Serializable {
      * this class.  To set multiple options you simply add them together.  For example,
      * ALLOW_2_SLASHES + NO_FRAGMENTS enables both of those options.
      */
-    public UrlValidator(long options) {
+    public UrlValidator(long options) {  // DONE
         this(null, null, options);
     }
 
@@ -242,7 +242,7 @@ public class UrlValidator implements Serializable {
      * this class.  To set multiple options you simply add them together.  For example,
      * ALLOW_2_SLASHES + NO_FRAGMENTS enables both of those options.
      */
-    public UrlValidator(String[] schemes, long options) {
+    public UrlValidator(String[] schemes, long options) {   // DONE
         this(schemes, null, options);
     }
 
@@ -279,7 +279,7 @@ public class UrlValidator implements Serializable {
             }
             allowedSchemes = new HashSet<String>(schemes.length);
             for(int i=0; i < schemes.length; i++) {
-                allowedSchemes.add(schemes[i].toUpperCase(Locale.ENGLISH));
+                allowedSchemes.add(schemes[i].toUpperCase(Locale.ENGLISH));             // BUG: should be toLowerCase()
 
             }
         }
@@ -315,10 +315,10 @@ public class UrlValidator implements Serializable {
 
         String authority = urlMatcher.group(PARSE_URL_AUTHORITY);
 
-        if ("http".equals(scheme)) {// Special case - file: allows an empty authority
+        if ("http".equals(scheme)) {// Special case - file: allows an empty authority     // BUG: should be "file" not "http"
             if (authority != null) {
                 if (authority.contains(":")) { // but cannot allow trailing :
-                    return false;
+                    return true;
                 }
             }
             // drop through to continue validation
