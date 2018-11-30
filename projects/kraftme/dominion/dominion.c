@@ -643,101 +643,6 @@ int getCost(int cardNumber)
   return -1;
 }
 
-int getAdventurer(struct gameState *state, int currentPlayer, int *temphand, int handPos){
-	int z=0, drawntreasure=0, cardDrawn;
-	while(drawntreasure<2){
-		if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
-			shuffle(currentPlayer, state);
-	    }
-	    drawCard(currentPlayer, state);
-	    cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
-	    if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
-	    	drawntreasure++;
-	    else{
-	    	z++;  // BUG: incorrectly increments z count before saving cardDrawn to the temphand, should be incremented at the end of the else block
-	    	temphand[z]=cardDrawn;
-	    	state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
-	    	//z++;
-	    }
-	}
-	while(z-1 >= 0){
-		// Discard all cards in play that have been drawn
-		state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1];
-	    z=z-1;
-	}
-	//discardCard(handPos, currentPlayer, state, 0);  // BUG: need to discard Adventurer
-	return 0;
-}
-
-int getSmithy(struct gameState *state, int currentPlayer, int handPos){
-    //+3 Cards
-    for (int i = 1; i < 3; i++){       // BUG: incorrect loop count, should be i = 0; i < 3; i++
-	  drawCard(currentPlayer, state);
-	}
-			
-    //discard card from hand
-    discardCard(handPos, currentPlayer, state, 0);
-    return 0;
-}
-
-int getSalvager(int choice1, struct gameState *state, int currentPlayer, int handPos){
-	//+1 buy
-	state->numBuys++;
-				
-	if (choice1){
-		//gain coins equal to trashed card
-		state->coins = state->coins - getCost( handCard(choice1, state) ); // BUG: incorrect arithmetic, should be state->coins '+' getCost(choice1, state)
-		//trash card
-		discardCard(choice1, currentPlayer, state, 1);	
-	}
-				
-	//discard card
-	discardCard(handPos, currentPlayer, state, 0);
-	return 0;
-}
-
-int getSeaHag(struct gameState *state, int currentPlayer, int handPos){
-	for (int i = 0; i < state->numPlayers; i++){
-		if (i == currentPlayer){                    // BUG: incorrect equality, should be !=
-			state->discard[i][state->discardCount[i]] = state->deck[i][state->deckCount[i]--];	// BUG: should be -1, not --		    
-			state->deckCount[i]--; // BUG: not needed
-	    	state->discardCount[i]++;
-	    	state->deck[i][state->deckCount[i]--] = curse; //Top card now a curse; BUG: should be -1, not --
-	    	//state->supplyCount[curse]--; // BUG: need to take curse from game supply
-	    }
-	}
-	
-	//discardCard(handPos, currentPlayer, state, 0); // BUG: need to discard Sea Hag
-	return 0;
-}
-
-int getTreasureMap(struct gameState *state, int currentPlayer, int handPos){
-    //search hand for another treasure_map
-    int index = -1;
-    for (int i = 0; i < state->handCount[currentPlayer]; i++){
-  	  if (state->hand[currentPlayer][i] == treasure_map && i != handPos){
-  		  index = i;
-  		  break;
-  	  }
-    }
-    if (index > -1){
-  	  //trash both treasure cards
-  	  discardCard(handPos, currentPlayer, state, 1);
-  	  discardCard(index, currentPlayer, state, 1);
-
-  	  //gain 4 Gold cards
-  	  for (int i = 0; i < 4; i++){
-  		  gainCard(gold, state, 1, currentPlayer);
-  	  }
-				
-  	  //return success
-  	  return 1;
-    }
-			
-    //no second treasure_map found in hand
-    return -1;
-}
-
 int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus)
 {
   int i;
@@ -1344,6 +1249,101 @@ int updateCoins(int player, struct gameState *state, int bonus)
   state->coins += bonus;
 
   return 0;
+}
+
+int getAdventurer(struct gameState *state, int currentPlayer, int *temphand, int handPos){
+	int z=0, drawntreasure=0, cardDrawn;
+	while(drawntreasure<2){
+		if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
+			shuffle(currentPlayer, state);
+	    }
+	    drawCard(currentPlayer, state);
+	    cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
+	    if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+	    	drawntreasure++;
+	    else{
+	    	z++;  // BUG: incorrectly increments z count before saving cardDrawn to the temphand, should be incremented at the end of the else block
+	    	temphand[z]=cardDrawn;
+	    	state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
+	    	//z++;
+	    }
+	}
+	while(z-1 >= 0){
+		// Discard all cards in play that have been drawn
+		state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1];
+	    z=z-1;
+	}
+	//discardCard(handPos, currentPlayer, state, 0);  // BUG: need to discard Adventurer
+	return 0;
+}
+
+int getSmithy(struct gameState *state, int currentPlayer, int handPos){
+    //+3 Cards
+    for (int i = 1; i < 3; i++){       // BUG: incorrect loop count, should be i = 0; i < 3; i++
+	  drawCard(currentPlayer, state);
+	}
+			
+    //discard card from hand
+    discardCard(handPos, currentPlayer, state, 0);
+    return 0;
+}
+
+int getSalvager(int choice1, struct gameState *state, int currentPlayer, int handPos){
+	//+1 buy
+	state->numBuys++;
+				
+	if (choice1){
+		//gain coins equal to trashed card
+		state->coins = state->coins - getCost( handCard(choice1, state) ); // BUG: incorrect arithmetic, should be state->coins '+' getCost(choice1, state)
+		//trash card
+		discardCard(choice1, currentPlayer, state, 1);	
+	}
+				
+	//discard card
+	discardCard(handPos, currentPlayer, state, 0);
+	return 0;
+}
+
+int getSeaHag(struct gameState *state, int currentPlayer, int handPos){
+	for (int i = 0; i < state->numPlayers; i++){
+		if (i == currentPlayer){                    // BUG: incorrect equality, should be !=
+			state->discard[i][state->discardCount[i]] = state->deck[i][state->deckCount[i]--];	// BUG: should be -1, not --		    
+			state->deckCount[i]--; // BUG: not needed
+	    	state->discardCount[i]++;
+	    	state->deck[i][state->deckCount[i]--] = curse; //Top card now a curse; BUG: should be -1, not --
+	    	//state->supplyCount[curse]--; // BUG: need to take curse from game supply
+	    }
+	}
+	
+	//discardCard(handPos, currentPlayer, state, 0); // BUG: need to discard Sea Hag
+	return 0;
+}
+
+int getTreasureMap(struct gameState *state, int currentPlayer, int handPos){
+    //search hand for another treasure_map
+    int index = -1;
+    for (int i = 0; i < state->handCount[currentPlayer]; i++){
+  	  if (state->hand[currentPlayer][i] == treasure_map && i != handPos){
+  		  index = i;
+  		  break;
+  	  }
+    }
+    if (index > -1){
+  	  //trash both treasure cards
+  	  discardCard(handPos, currentPlayer, state, 1);
+  	  discardCard(index, currentPlayer, state, 1);
+
+  	  //gain 4 Gold cards
+  	  for (int i = 0; i < 4; i++){
+  		  gainCard(gold, state, 1, currentPlayer);
+  	  }
+				
+  	  //return success
+  	  return 1;
+    }
+			
+    //no second treasure_map found in hand
+    return -1;
 }
 
 //end of dominion.c
