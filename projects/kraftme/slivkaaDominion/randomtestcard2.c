@@ -154,24 +154,41 @@ int main ()	{
 		}
 		
 		//printf("\nTEST-2: currentPlayer's handCount - Smithy + 3 cards\n");
-		if(testG.handCount[currentPlayer] != G.handCount[currentPlayer] + 2){
-			++index;
-			printf(  "TEST-2 FAIL: handCount changed from %d to %d\n"  , G.handCount[currentPlayer], testG.handCount[currentPlayer]);
+		if(G.deckCount[currentPlayer] < 3){
+			if(testG.handCount[currentPlayer] != G.handCount[currentPlayer] + G.deckCount[currentPlayer]-1){
+				++index;
+				printf(  "TEST-2 FAIL: deckCount was %d and handCount changed from %d to %d\n", G.deckCount[currentPlayer], G.handCount[currentPlayer], testG.handCount[currentPlayer]);
+			}
+		}
+		else{
+			if(testG.handCount[currentPlayer] != G.handCount[currentPlayer] + 2){
+				++index;
+				printf(  "TEST-2 FAIL: handCount changed from %d to %d\n"  , G.handCount[currentPlayer], testG.handCount[currentPlayer]);
+			}
 		}
 		  
 		//printf("\nTEST-3: currentPlayer's deckCount - 3 cards\n");
-		if(testG.deckCount[currentPlayer] != G.deckCount[currentPlayer] - 3){
-			++index;
-			printf(  "TEST-3 FAIL: deckCount changed from %d to %d\n"  , G.deckCount[currentPlayer], testG.deckCount[currentPlayer]);
+		if(G.deckCount[currentPlayer] < 3){
+			if(testG.deckCount[currentPlayer] != 0){
+				++index;
+				printf(  "TEST-3 FAIL: deckCount changed from %d to %d\n"  , G.deckCount[currentPlayer], testG.deckCount[currentPlayer]);
+			}
+		}
+		else{
+			if(testG.deckCount[currentPlayer] != G.deckCount[currentPlayer] - 3){
+				++index;
+				printf(  "TEST-3 FAIL: deckCount changed from %d to %d\n"  , G.deckCount[currentPlayer], testG.deckCount[currentPlayer]);
+			}
 		}
 		
-		//printf("\nTEST-4: 3 new cards in currentPlayer's hand are same as 3 cards removed from currentPlayer's deck\n");
+		/*printf("\nTEST-4: 3 new cards in currentPlayer's hand are same as 3 cards removed from currentPlayer's deck\n");
 		if(testG.hand[currentPlayer][testG.handCount[currentPlayer]-1] != G.deck[currentPlayer][G.deckCount[currentPlayer]-3] ||
 		   testG.hand[currentPlayer][testG.handCount[currentPlayer]-2] != G.deck[currentPlayer][G.deckCount[currentPlayer]-2] ||
 		   testG.hand[currentPlayer][testG.handCount[currentPlayer]-3] != G.deck[currentPlayer][G.deckCount[currentPlayer]-1]){
 			++index;
 			printf(  "TEST-4 FAIL: new cards in hand did not come from top of deck\n"  );
-		}
+
+		}*/
 		
 		//printf("\nTEST-5: currentPlayer's discardCount didn't change\n");
 		if(testG.discardCount[currentPlayer] != G.discardCount[currentPlayer]){
@@ -249,15 +266,20 @@ int main ()	{
 				}
 				
 				//printf("\nTEST-17: 3 cards on top of opponent's deck didn't change\n");
-				if(testG.deck[i][testG.deckCount[i]-1] != G.deck[i][G.deckCount[i]-1] ||
+				for(j = 1; j <= testG.deckCount[i]; j++){
+					if(testG.deck[i][testG.deckCount[i]-j] != G.deck[i][G.deckCount[i]-j]){
+						++index;
+						printf(  "TEST-17 FAIL: cards from top of opponent %d's deck changed\n", i  );
+						break;
+					}
+				}
+				/*if(testG.deck[i][testG.deckCount[i]-1] != G.deck[i][G.deckCount[i]-1] ||
 				   testG.deck[i][testG.deckCount[i]-2] != G.deck[i][G.deckCount[i]-2] ||
 				   testG.deck[i][testG.deckCount[i]-3] != G.deck[i][G.deckCount[i]-3]){
 					++index;
 					printf(  "TEST-17 FAIL: cards from top of opponent %d's deck changed\n", i  );
-					printf("then: %d, %d, %d\n", G.deck[i][G.deckCount[i]-1], G.deck[i][G.deckCount[i]-2], G.deck[i][G.deckCount[i]-3]);
-					printf("now: %d, %d, %d\n", testG.deck[i][testG.deckCount[i]-1], testG.deck[i][testG.deckCount[i]-2], testG.deck[i][testG.deckCount[i]-3]);
-				}
-				
+				}*/
+
 				//printf("\nTEST-18: opponent's discardCount didn't change\n");
 				if(testG.discardCount[i] != G.discardCount[i]){
 					++index;

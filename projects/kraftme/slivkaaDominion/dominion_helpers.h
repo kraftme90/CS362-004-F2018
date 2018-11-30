@@ -13,7 +13,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3,
 	       struct gameState *state, int handPos, int *bonus);
 
 //New functions after refactoring
-void playAdventurer(struct gameState *state, int drawntreasure, int z, int currentPlayer, int cardDrawn, int *temphand);
+void playAdventurer(struct gameState *state, int drawntreasure, int z, int currentPlayer, int cardDrawn, int *temphand, int handPos);
 void playCouncilRoom(struct gameState *state, int handPos, int currentPlayer);
 void playFeast(struct gameState *state, int choice1, int *temphand, int currentPlayer);
 void playSmithy(struct gameState *state, int handPos, int currentPlayer);

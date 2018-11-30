@@ -663,7 +663,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
   switch( card ) 
     {
     case adventurer:
-      playAdventurer(state, drawntreasure, z, currentPlayer, cardDrawn, temphand);
+      playAdventurer(state, drawntreasure, z, currentPlayer, cardDrawn, temphand, handPos);
       return 0;
 			
     case council_room:
@@ -1204,10 +1204,10 @@ int updateCoins(int player, struct gameState *state, int bonus)
   return 0;
 }
 
-void playAdventurer(struct gameState *state, int drawntreasure, int z, int currentPlayer, int cardDrawn, int *temphand){
+void playAdventurer(struct gameState *state, int drawntreasure, int z, int currentPlayer, int cardDrawn, int *temphand, int handPos){
   // Variables used: drawntreasure, state, currentPlayer, z, temphand
-  //while(drawntreasure<2){   //Original line
-  while(drawntreasure<4){   //Bug: allows adventurer to draw more treasure cards than intended, artem 181013
+  while(drawntreasure<2){   //Original line
+  //while(drawntreasure<4){   //Bug: allows adventurer to draw more treasure cards than intended, artem 181013
     if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
       shuffle(currentPlayer, state);
     }
@@ -1226,7 +1226,7 @@ void playAdventurer(struct gameState *state, int drawntreasure, int z, int curre
     state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
     z=z-1;
   }
-  
+  discardCard(handPos, currentPlayer, state, 0);
 }
 
 void playCouncilRoom(struct gameState *state, int handPos, int currentPlayer){
@@ -1311,7 +1311,8 @@ void playSmithy(struct gameState *state, int handPos, int currentPlayer){
 	  drawCard(currentPlayer, state);
 	}		
   //discard card from hand
-  //discardCard(handPos, currentPlayer, state, 0); //Bug: discardCard line commented out, artem 181013
+  discardCard(handPos, currentPlayer, state, 0); //Bug: discardCard line commented out, artem 181013
+  
 }
 
 void playSteward(struct gameState *state, int choice1, int choice2, int choice3, int handPos, int currentPlayer){

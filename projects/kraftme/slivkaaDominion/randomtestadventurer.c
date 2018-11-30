@@ -35,10 +35,14 @@ int main ()	{
 	int i, m, j, p, it;
 	int iteration = 1;
 	int index = -1;
+	int deckTreasure, handTreasure;
 	
 	printf("\n--------------- Begin Adventurer Random Tests ---------------\n");
 	
 	for(it = 0; it < 100; it++){
+		deckTreasure = 0;
+		handTreasure = 0;
+
 		printf("Iteration - %d\n", iteration++);
 		
 		numPlayers = randNum(2,4); 					// random between 2 and 4
@@ -99,6 +103,9 @@ int main ()	{
 		  int first = randNum(2, G.deckCount[i]);
 		  for (j = 0; j < first; j++){
 			  G.deck[i][j] = randNum(4, 6);  // copper to gold
+			  if(i == currentPlayer){
+				  deckTreasure++;
+			  }
 		  }
 		  int second = randNum(0, G.deckCount[i] - first);
 		  for(m = j; m < second; m++){
@@ -126,10 +133,14 @@ int main ()	{
 		  //printf("Player %d hand: ", i);
 		  for (j = 0; j < randNum(1,G.deckCount[i]); j++){
 			  drawCard(i, &G);
+			  if(i == currentPlayer && (G.hand[i][j] == copper || G.hand[i][j] == silver || G.hand[i][j] == gold)){
+				  handTreasure++;
+			  }
 			  //printf("%d, ", G.hand[i][j]);
 		  }
-		  //printf("\n");
 		}
+
+		deckTreasure -= handTreasure;
 	  
 		//set embargo tokens to 0 for all supply piles
 		for (i = 0; i <= treasure_map; i++){
@@ -160,9 +171,17 @@ int main ()	{
 		}
 		
 		//printf("\nTEST-2: currentPlayer's handCount - Adventurer + 2 Treasures\n");
-		if(testG.handCount[currentPlayer] != G.handCount[currentPlayer] + 1){
-			++index;
-			printf( "TEST-2 FAIL: handCount changed from %d to %d\n" , G.handCount[currentPlayer], testG.handCount[currentPlayer]);
+		if(deckTreasure < 2){
+			if(testG.handCount[currentPlayer] != G.handCount[currentPlayer] + deckTreasure -1){
+				++index;
+				printf( "TEST-2 FAIL: there were %d Treasures in player's deck, but handCount changed from %d to %d\n" , deckTreasure, G.handCount[currentPlayer], testG.handCount[currentPlayer]);
+			}
+		}
+		else{
+			if(testG.handCount[currentPlayer] != G.handCount[currentPlayer] + 1){
+				++index;
+				printf( "TEST-2 FAIL: handCount changed from %d to %d\n" , G.handCount[currentPlayer], testG.handCount[currentPlayer]);
+			}
 		}
 		 
 		//printf("\nTEST-3: currentPlayer's deckCount - cards drawn until 2 Treasures found\n");
@@ -172,21 +191,23 @@ int main ()	{
 		}
 		
 		//printf("\nTEST-4: 2 new cards in currentPlayer's hand are Treasures gained from currentPlayer's deck\n");
-		if((testG.hand[currentPlayer][testG.handCount[currentPlayer]-1] != copper && 
-				testG.hand[currentPlayer][testG.handCount[currentPlayer]-1] != silver && 
-				testG.hand[currentPlayer][testG.handCount[currentPlayer]-1] != gold) ||
-		   ((testG.hand[currentPlayer][handPos] != copper && 
-				   testG.hand[currentPlayer][handPos] != silver && 
-				   testG.hand[currentPlayer][handPos] != gold)  &&
-			(testG.hand[currentPlayer][testG.handCount[currentPlayer]-2] != copper && 
-					testG.hand[currentPlayer][testG.handCount[currentPlayer]-2] != silver && 
-					testG.hand[currentPlayer][testG.handCount[currentPlayer]-2] != gold))){
-			++index;
-			printf( "TEST-4 FAIL: new cards in hand are not Treasures\n" );
+		if(deckTreasure >= 2){
+			if((testG.hand[currentPlayer][testG.handCount[currentPlayer]-1] != copper &&
+					testG.hand[currentPlayer][testG.handCount[currentPlayer]-1] != silver &&
+					testG.hand[currentPlayer][testG.handCount[currentPlayer]-1] != gold) ||
+			   ((testG.hand[currentPlayer][handPos] != copper &&
+					   testG.hand[currentPlayer][handPos] != silver &&
+					   testG.hand[currentPlayer][handPos] != gold)  &&
+				(testG.hand[currentPlayer][testG.handCount[currentPlayer]-2] != copper &&
+						testG.hand[currentPlayer][testG.handCount[currentPlayer]-2] != silver &&
+						testG.hand[currentPlayer][testG.handCount[currentPlayer]-2] != gold))){
+				++index;
+				printf( "TEST-4 FAIL: new cards in hand are not Treasures\n" );
+			}
 		}
 		
 		//printf("\nTEST-5: Adventurer set to be discarded at end of turn\n");
-		if(testG.hand[currentPlayer][testG.handCount[currentPlayer]] != -1){
+		if(testG.hand[currentPlayer][testG.handCount[currentPlayer]] != -1 && testG.hand[currentPlayer][testG.handCount[currentPlayer]] != adventurer){
 			++index;
 			printf( "TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn\n" );
 		}
