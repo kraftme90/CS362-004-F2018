@@ -6247,7 +6247,7 @@ FAIL: http://(false) .aaa(true) :65a(true) /test1//file(false) ?action=edit&mode
 FAIL: http://(false) .aaa(true) :65a(true) /#/file(true) (false)  in http://.aaa:65a/#/file should be invalid
 FAIL: http://(false) .aaa(true) :65a(true) /#/file(true) ?action*view(true)  in http://.aaa:65a/#/file?action*view should be invalid
 FAIL: http://(false) .aaa(true) :65a(true) /#/file(true) ?action=edit&mode=up(false)  in http://.aaa:65a/#/file?action=edit&mode=up should be invalid
-FAIL: ftp://www.google.com:80/test1 caused java.lang.ExceptionInInitializerError
+FAIL: ftp://www.google.com:80/test1 caused java.lang.NoClassDefFoundError: Could not initialize class DomainValidator
 FAIL: ftp://www.google.com:80/test1?action*view caused java.lang.NoClassDefFoundError: Could not initialize class DomainValidator
 FAIL: ftp://www.google.com:80/test1?action=edit&mode=up caused java.lang.NoClassDefFoundError: Could not initialize class DomainValidator
 FAIL: ftp://www.google.com:80/t123 caused java.lang.NoClassDefFoundError: Could not initialize class DomainValidator
