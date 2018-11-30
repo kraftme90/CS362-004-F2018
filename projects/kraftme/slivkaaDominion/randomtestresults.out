@@ -1,0 +1,1794 @@
+
+--------------- Begin Salvager Random Tests ---------------
+Iteration - 1
+All tests PASSED
+
+Iteration - 2
+All tests PASSED
+
+Iteration - 3
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+
+Iteration - 4
+All tests PASSED
+
+Iteration - 5
+All tests PASSED
+
+Iteration - 6
+All tests PASSED
+
+Iteration - 7
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+
+Iteration - 8
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 3 to 3
+
+Iteration - 9
+All tests PASSED
+
+Iteration - 10
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 0 to 0
+
+Iteration - 11
+All tests PASSED
+
+Iteration - 12
+All tests PASSED
+
+Iteration - 13
+All tests PASSED
+
+Iteration - 14
+All tests PASSED
+
+Iteration - 15
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+
+Iteration - 16
+All tests PASSED
+
+Iteration - 17
+All tests PASSED
+
+Iteration - 18
+All tests PASSED
+
+Iteration - 19
+All tests PASSED
+
+Iteration - 20
+All tests PASSED
+
+Iteration - 21
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 2 to 2
+
+Iteration - 22
+TEST-2 FAIL: handCount changed from 3 to 2
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+
+Iteration - 23
+All tests PASSED
+
+Iteration - 24
+All tests PASSED
+
+Iteration - 25
+TEST-2 FAIL: handCount changed from 5 to 4
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 0 to 0
+
+Iteration - 26
+All tests PASSED
+
+Iteration - 27
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+
+Iteration - 28
+TEST-2 FAIL: handCount changed from 3 to 2
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 4 to 4
+
+Iteration - 29
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+
+Iteration - 30
+TEST-2 FAIL: handCount changed from 3 to 2
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 6 to 6
+
+Iteration - 31
+All tests PASSED
+
+Iteration - 32
+All tests PASSED
+
+Iteration - 33
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 3 to 3
+
+Iteration - 34
+TEST-2 FAIL: handCount changed from 3 to 2
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 1 to 1
+
+Iteration - 35
+All tests PASSED
+
+Iteration - 36
+All tests PASSED
+
+Iteration - 37
+All tests PASSED
+
+Iteration - 38
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+
+Iteration - 39
+TEST-2 FAIL: handCount changed from 4 to 3
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 6 to 6
+
+Iteration - 40
+All tests PASSED
+
+Iteration - 41
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+
+Iteration - 42
+TEST-2 FAIL: handCount changed from 6 to 5
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 5
+
+Iteration - 43
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 3 to 3
+
+Iteration - 44
+All tests PASSED
+
+Iteration - 45
+TEST-2 FAIL: handCount changed from 4 to 3
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 2 to 2
+
+Iteration - 46
+All tests PASSED
+
+Iteration - 47
+All tests PASSED
+
+Iteration - 48
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+
+Iteration - 49
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 3 to 3
+
+Iteration - 50
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 1 to 1
+
+Iteration - 51
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 4 to 4
+
+Iteration - 52
+TEST-2 FAIL: handCount changed from 5 to 4
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 8 to 8
+
+Iteration - 53
+All tests PASSED
+
+Iteration - 54
+All tests PASSED
+
+Iteration - 55
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+
+Iteration - 56
+All tests PASSED
+
+Iteration - 57
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 8 to 8
+
+Iteration - 58
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 4 to 4
+
+Iteration - 59
+TEST-2 FAIL: handCount changed from 3 to 2
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 5
+
+Iteration - 60
+All tests PASSED
+
+Iteration - 61
+All tests PASSED
+
+Iteration - 62
+TEST-2 FAIL: handCount changed from 3 to 2
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 2 to 2
+
+Iteration - 63
+All tests PASSED
+
+Iteration - 64
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+
+Iteration - 65
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+
+Iteration - 66
+All tests PASSED
+
+Iteration - 67
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 0 to 0
+
+Iteration - 68
+All tests PASSED
+
+Iteration - 69
+All tests PASSED
+
+Iteration - 70
+All tests PASSED
+
+Iteration - 71
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+
+Iteration - 72
+All tests PASSED
+
+Iteration - 73
+All tests PASSED
+
+Iteration - 74
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+
+Iteration - 75
+All tests PASSED
+
+Iteration - 76
+All tests PASSED
+
+Iteration - 77
+All tests PASSED
+
+Iteration - 78
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 5
+
+Iteration - 79
+TEST-2 FAIL: handCount changed from 5 to 4
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 4 to 4
+
+Iteration - 80
+All tests PASSED
+
+Iteration - 81
+All tests PASSED
+
+Iteration - 82
+All tests PASSED
+
+Iteration - 83
+All tests PASSED
+
+Iteration - 84
+All tests PASSED
+
+Iteration - 85
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+
+Iteration - 86
+All tests PASSED
+
+Iteration - 87
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 0 to 0
+
+Iteration - 88
+All tests PASSED
+
+Iteration - 89
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+
+Iteration - 90
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+
+Iteration - 91
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 5
+
+Iteration - 92
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+
+Iteration - 93
+All tests PASSED
+
+Iteration - 94
+TEST-2 FAIL: handCount changed from 2 to 1
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 5
+
+Iteration - 95
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-6 FAIL: Salvager is not set to be discarded at end of player's turn
+TEST-8 FAIL: last playedCard was not Salvager
+
+Iteration - 96
+All tests PASSED
+
+Iteration - 97
+All tests PASSED
+
+Iteration - 98
+TEST-2 FAIL: handCount changed from 8 to 7
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 5 to 5
+
+Iteration - 99
+TEST-2 FAIL: handCount changed from 3 to 2
+TEST-5 FAIL: choice1 is not set to be trashed at end of player's turn
+TEST-14 FAIL: currentPlayer's coins changed from 3 to 3
+
+Iteration - 100
+All tests PASSED
+
+---------------- End Salvager Random Tests ----------------
+
+
+--------------- Begin Smithy Random Tests ---------------
+Iteration - 1
+TEST-2 FAIL: handCount changed from 5 to 8
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 0 to 0
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 2
+TEST-2 FAIL: handCount changed from 2 to 3
+TEST-3 FAIL: deckCount changed from 1 to 0
+TEST-4 FAIL: new cards in hand did not come from top of deck
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 5 to 5
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 3
+TEST-2 FAIL: handCount changed from 1 to 4
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 4 to 4
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 4
+TEST-2 FAIL: handCount changed from 3 to 6
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 2 to 2
+TEST-8 FAIL: last playedCard was not Smithy
+TEST-17 FAIL: cards from top of opponent 0's deck changed
+then: 0, 2, 3
+now: 0, 2, 6
+
+Iteration - 5
+TEST-2 FAIL: handCount changed from 4 to 7
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 1 to 1
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 6
+TEST-2 FAIL: handCount changed from 3 to 6
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 5 to 5
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 7
+TEST-2 FAIL: handCount changed from 6 to 9
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 3 to 3
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 8
+TEST-2 FAIL: handCount changed from 5 to 8
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 3 to 3
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 9
+TEST-2 FAIL: handCount changed from 2 to 3
+TEST-3 FAIL: deckCount changed from 1 to 0
+TEST-4 FAIL: new cards in hand did not come from top of deck
+TEST-7 FAIL: playedCardCount changed from 4 to 4
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 10
+TEST-2 FAIL: handCount changed from 4 to 7
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 1 to 1
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 11
+TEST-2 FAIL: handCount changed from 4 to 7
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 4 to 4
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 12
+TEST-2 FAIL: handCount changed from 2 to 5
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 4 to 4
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 13
+TEST-2 FAIL: handCount changed from 3 to 6
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 2 to 2
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 14
+TEST-2 FAIL: handCount changed from 1 to 4
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 2 to 2
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 15
+TEST-2 FAIL: handCount changed from 2 to 5
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 2 to 2
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 16
+TEST-2 FAIL: handCount changed from 2 to 5
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 4 to 4
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 17
+TEST-3 FAIL: deckCount changed from 2 to 0
+TEST-4 FAIL: new cards in hand did not come from top of deck
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 2 to 2
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 18
+TEST-2 FAIL: handCount changed from 3 to 6
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 5 to 5
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 19
+TEST-2 FAIL: handCount changed from 3 to 6
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 3 to 3
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 20
+TEST-3 FAIL: deckCount changed from 2 to 0
+TEST-4 FAIL: new cards in hand did not come from top of deck
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 3 to 3
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 21
+TEST-2 FAIL: handCount changed from 2 to 5
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 0 to 0
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 22
+TEST-2 FAIL: handCount changed from 2 to 5
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 1 to 1
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 23
+TEST-2 FAIL: handCount changed from 3 to 6
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 3 to 3
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 24
+TEST-2 FAIL: handCount changed from 5 to 8
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 1 to 1
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 25
+TEST-2 FAIL: handCount changed from 1 to 4
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 0 to 0
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 26
+TEST-2 FAIL: handCount changed from 4 to 7
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 1 to 1
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 27
+TEST-2 FAIL: handCount changed from 2 to 3
+TEST-3 FAIL: deckCount changed from 1 to 0
+TEST-4 FAIL: new cards in hand did not come from top of deck
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 5 to 5
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 28
+TEST-2 FAIL: handCount changed from 2 to 5
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 2 to 2
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 29
+TEST-2 FAIL: handCount changed from 1 to 4
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 3 to 3
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 30
+TEST-2 FAIL: handCount changed from 4 to 7
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 2 to 2
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 31
+TEST-3 FAIL: deckCount changed from 2 to 0
+TEST-4 FAIL: new cards in hand did not come from top of deck
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 5 to 5
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 32
+TEST-2 FAIL: handCount changed from 3 to 6
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 0 to 0
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 33
+TEST-2 FAIL: handCount changed from 2 to 5
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 3 to 3
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 34
+TEST-2 FAIL: handCount changed from 4 to 7
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 1 to 1
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 35
+TEST-2 FAIL: handCount changed from 3 to 6
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 1 to 1
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 36
+TEST-2 FAIL: handCount changed from 2 to 5
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 3 to 3
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 37
+TEST-2 FAIL: handCount changed from 2 to 5
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 1 to 1
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 38
+TEST-2 FAIL: handCount changed from 2 to 3
+TEST-3 FAIL: deckCount changed from 1 to 0
+TEST-4 FAIL: new cards in hand did not come from top of deck
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 1 to 1
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 39
+TEST-3 FAIL: deckCount changed from 2 to 0
+TEST-4 FAIL: new cards in hand did not come from top of deck
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 5 to 5
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 40
+TEST-2 FAIL: handCount changed from 7 to 10
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 4 to 4
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 41
+TEST-2 FAIL: handCount changed from 3 to 6
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 2 to 2
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 42
+TEST-2 FAIL: handCount changed from 4 to 7
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 1 to 1
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 43
+TEST-2 FAIL: handCount changed from 1 to 4
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 2 to 2
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 44
+TEST-2 FAIL: handCount changed from 1 to 2
+TEST-3 FAIL: deckCount changed from 1 to 0
+TEST-4 FAIL: new cards in hand did not come from top of deck
+TEST-7 FAIL: playedCardCount changed from 3 to 3
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 45
+TEST-2 FAIL: handCount changed from 7 to 10
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 1 to 1
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 46
+TEST-2 FAIL: handCount changed from 3 to 6
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 4 to 4
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 47
+TEST-2 FAIL: handCount changed from 7 to 10
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 1 to 1
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 48
+TEST-2 FAIL: handCount changed from 3 to 6
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 1 to 1
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 49
+TEST-3 FAIL: deckCount changed from 2 to 0
+TEST-4 FAIL: new cards in hand did not come from top of deck
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 4 to 4
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 50
+TEST-2 FAIL: handCount changed from 2 to 5
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 2 to 2
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 51
+TEST-2 FAIL: handCount changed from 2 to 5
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 0 to 0
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 52
+TEST-3 FAIL: deckCount changed from 2 to 0
+TEST-4 FAIL: new cards in hand did not come from top of deck
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 1 to 1
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 53
+TEST-2 FAIL: handCount changed from 3 to 6
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 3 to 3
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 54
+TEST-2 FAIL: handCount changed from 6 to 9
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 1 to 1
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 55
+TEST-2 FAIL: handCount changed from 3 to 6
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 4 to 4
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 56
+TEST-2 FAIL: handCount changed from 3 to 6
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 1 to 1
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 57
+TEST-2 FAIL: handCount changed from 3 to 6
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 4 to 4
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 58
+TEST-2 FAIL: handCount changed from 1 to 4
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 2 to 2
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 59
+TEST-2 FAIL: handCount changed from 4 to 7
+TEST-7 FAIL: playedCardCount changed from 4 to 4
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 60
+TEST-2 FAIL: handCount changed from 4 to 7
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 4 to 4
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 61
+TEST-2 FAIL: handCount changed from 4 to 7
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 2 to 2
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 62
+TEST-3 FAIL: deckCount changed from 2 to 0
+TEST-4 FAIL: new cards in hand did not come from top of deck
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 5 to 5
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 63
+TEST-2 FAIL: handCount changed from 2 to 5
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 5 to 5
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 64
+TEST-2 FAIL: handCount changed from 3 to 6
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 0 to 0
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 65
+TEST-2 FAIL: handCount changed from 2 to 5
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 5 to 5
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 66
+TEST-2 FAIL: handCount changed from 1 to 4
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 3 to 3
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 67
+TEST-2 FAIL: handCount changed from 4 to 7
+TEST-7 FAIL: playedCardCount changed from 3 to 3
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 68
+TEST-2 FAIL: handCount changed from 3 to 6
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 4 to 4
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 69
+TEST-2 FAIL: handCount changed from 6 to 9
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 4 to 4
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 70
+TEST-2 FAIL: handCount changed from 2 to 5
+TEST-7 FAIL: playedCardCount changed from 3 to 3
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 71
+TEST-2 FAIL: handCount changed from 3 to 6
+TEST-7 FAIL: playedCardCount changed from 2 to 2
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 72
+TEST-2 FAIL: handCount changed from 3 to 6
+TEST-7 FAIL: playedCardCount changed from 4 to 4
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 73
+TEST-2 FAIL: handCount changed from 1 to 2
+TEST-3 FAIL: deckCount changed from 1 to 0
+TEST-4 FAIL: new cards in hand did not come from top of deck
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 5 to 5
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 74
+TEST-2 FAIL: handCount changed from 2 to 5
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 1 to 1
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 75
+TEST-2 FAIL: handCount changed from 6 to 9
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 0 to 0
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 76
+TEST-2 FAIL: handCount changed from 1 to 4
+TEST-7 FAIL: playedCardCount changed from 4 to 4
+TEST-8 FAIL: last playedCard was not Smithy
+TEST-17 FAIL: cards from top of opponent 0's deck changed
+then: 0, 1, 1
+now: 0, 1, 4
+
+Iteration - 77
+TEST-2 FAIL: handCount changed from 4 to 7
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 3 to 3
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 78
+TEST-2 FAIL: handCount changed from 1 to 4
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 2 to 2
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 79
+TEST-2 FAIL: handCount changed from 6 to 9
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 0 to 0
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 80
+TEST-2 FAIL: handCount changed from 1 to 4
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 2 to 2
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 81
+TEST-2 FAIL: handCount changed from 1 to 2
+TEST-3 FAIL: deckCount changed from 1 to 0
+TEST-4 FAIL: new cards in hand did not come from top of deck
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 0 to 0
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 82
+TEST-2 FAIL: handCount changed from 4 to 7
+TEST-7 FAIL: playedCardCount changed from 4 to 4
+TEST-8 FAIL: last playedCard was not Smithy
+TEST-17 FAIL: cards from top of opponent 0's deck changed
+then: 26, 4, 4
+now: 26, 7, 4
+
+Iteration - 83
+TEST-2 FAIL: handCount changed from 4 to 7
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 2 to 2
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 84
+TEST-2 FAIL: handCount changed from 3 to 6
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 5 to 5
+TEST-8 FAIL: last playedCard was not Smithy
+TEST-17 FAIL: cards from top of opponent 0's deck changed
+then: 14, 17, 3
+now: 14, 17, 6
+
+Iteration - 85
+TEST-2 FAIL: handCount changed from 5 to 8
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 3 to 3
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 86
+TEST-2 FAIL: handCount changed from 2 to 5
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 3 to 3
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 87
+TEST-2 FAIL: handCount changed from 7 to 10
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 1 to 1
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 88
+TEST-2 FAIL: handCount changed from 4 to 7
+TEST-7 FAIL: playedCardCount changed from 0 to 0
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 89
+TEST-2 FAIL: handCount changed from 3 to 6
+TEST-7 FAIL: playedCardCount changed from 5 to 5
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 90
+TEST-2 FAIL: handCount changed from 1 to 4
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 0 to 0
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 91
+TEST-2 FAIL: handCount changed from 3 to 6
+TEST-7 FAIL: playedCardCount changed from 0 to 0
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 92
+TEST-2 FAIL: handCount changed from 1 to 4
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 1 to 1
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 93
+TEST-2 FAIL: handCount changed from 3 to 6
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 4 to 4
+TEST-8 FAIL: last playedCard was not Smithy
+TEST-17 FAIL: cards from top of opponent 0's deck changed
+then: 11, 3, 3
+now: 11, 3, 6
+
+Iteration - 94
+TEST-2 FAIL: handCount changed from 1 to 4
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 4 to 4
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 95
+TEST-2 FAIL: handCount changed from 3 to 6
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 5 to 5
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 96
+TEST-2 FAIL: handCount changed from 5 to 8
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 3 to 3
+TEST-8 FAIL: last playedCard was not Smithy
+TEST-17 FAIL: cards from top of opponent 0's deck changed
+then: 1, 5, 6
+now: 1, 8, 6
+
+Iteration - 97
+TEST-3 FAIL: deckCount changed from 2 to 0
+TEST-4 FAIL: new cards in hand did not come from top of deck
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 0 to 0
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 98
+TEST-2 FAIL: handCount changed from 1 to 4
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 3 to 3
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 99
+TEST-2 FAIL: handCount changed from 1 to 4
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 0 to 0
+TEST-8 FAIL: last playedCard was not Smithy
+
+Iteration - 100
+TEST-2 FAIL: handCount changed from 2 to 5
+TESt-6 FAIL: Smithy is not set to be discarded at end of player's turn
+TEST-7 FAIL: playedCardCount changed from 2 to 2
+TEST-8 FAIL: last playedCard was not Smithy
+
+---------------- End Smithy Random Tests ----------------
+
+
+--------------- Begin Adventurer Random Tests ---------------
+Iteration - 1
+TEST-2 FAIL: handCount changed from 5 to 9
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 5 to 5
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 2
+TEST-2 FAIL: handCount changed from 1 to 3
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 0 to 0
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 3
+TEST-2 FAIL: handCount changed from 3 to 6
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 4 to 4
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 4
+TEST-2 FAIL: handCount changed from 1 to 4
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 1 to 1
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 5
+TEST-2 FAIL: handCount changed from 6 to 10
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 5 to 5
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 6
+TEST-2 FAIL: handCount changed from 2 to 6
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 7
+TEST-2 FAIL: handCount changed from 2 to 6
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 2 to 2
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 8
+TEST-2 FAIL: handCount changed from 3 to 6
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 1 to 1
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 9
+TEST-2 FAIL: handCount changed from 6 to 9
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 4 to 4
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 10
+TEST-2 FAIL: handCount changed from 1 to 3
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 5 to 5
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 11
+TEST-2 FAIL: handCount changed from 7 to 11
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 12
+TEST-2 FAIL: handCount changed from 1 to 3
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 5 to 5
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 13
+TEST-2 FAIL: handCount changed from 7 to 11
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 0 to 0
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 14
+TEST-2 FAIL: handCount changed from 4 to 6
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 1 to 1
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 15
+TEST-2 FAIL: handCount changed from 2 to 6
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 1 to 1
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 16
+TEST-2 FAIL: handCount changed from 3 to 5
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 2 to 2
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 17
+TEST-2 FAIL: handCount changed from 1 to 5
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 2 to 2
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 18
+TEST-2 FAIL: handCount changed from 2 to 5
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 5 to 5
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 19
+TEST-2 FAIL: handCount changed from 6 to 10
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 4 to 4
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 20
+TEST-4 FAIL: new cards in hand are not Treasures
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 2 to 2
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 21
+TEST-2 FAIL: handCount changed from 1 to 3
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 0 to 0
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 22
+TEST-2 FAIL: handCount changed from 1 to 3
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 2 to 2
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 23
+TEST-2 FAIL: handCount changed from 6 to 10
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 24
+TEST-2 FAIL: handCount changed from 6 to 10
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 2 to 2
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 25
+TEST-2 FAIL: handCount changed from 3 to 6
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 4 to 4
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 26
+TEST-2 FAIL: handCount changed from 2 to 6
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 5 to 5
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 27
+TEST-2 FAIL: handCount changed from 1 to 3
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 0 to 0
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 28
+TEST-2 FAIL: handCount changed from 3 to 7
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 29
+TEST-2 FAIL: handCount changed from 5 to 9
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 5 to 5
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 30
+TEST-2 FAIL: handCount changed from 1 to 5
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 1 to 1
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 31
+TEST-2 FAIL: handCount changed from 4 to 8
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 4 to 4
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 32
+TEST-2 FAIL: handCount changed from 1 to 4
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 4 to 4
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 33
+TEST-2 FAIL: handCount changed from 2 to 4
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 0 to 0
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 34
+TEST-2 FAIL: handCount changed from 5 to 9
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 4 to 4
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 35
+TEST-2 FAIL: handCount changed from 4 to 6
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 5 to 5
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 36
+TEST-2 FAIL: handCount changed from 2 to 6
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 5 to 5
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 37
+TEST-2 FAIL: handCount changed from 3 to 7
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 38
+TEST-4 FAIL: new cards in hand are not Treasures
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 39
+TEST-2 FAIL: handCount changed from 1 to 5
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 40
+TEST-2 FAIL: handCount changed from 2 to 6
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 41
+TEST-4 FAIL: new cards in hand are not Treasures
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 5 to 5
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 42
+TEST-2 FAIL: handCount changed from 4 to 8
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 43
+TEST-2 FAIL: handCount changed from 2 to 4
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 44
+TEST-2 FAIL: handCount changed from 3 to 6
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 45
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 2 to 2
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 46
+TEST-2 FAIL: handCount changed from 4 to 7
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 5 to 5
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 47
+TEST-2 FAIL: handCount changed from 3 to 7
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 2 to 2
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 48
+TEST-2 FAIL: handCount changed from 2 to 6
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 4 to 4
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 49
+TEST-2 FAIL: handCount changed from 3 to 6
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 50
+TEST-2 FAIL: handCount changed from 4 to 8
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 5 to 5
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 51
+TEST-2 FAIL: handCount changed from 2 to 4
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 4 to 4
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 52
+TEST-2 FAIL: handCount changed from 5 to 9
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 53
+TEST-2 FAIL: handCount changed from 6 to 10
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 2 to 2
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 54
+TEST-2 FAIL: handCount changed from 2 to 4
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 0 to 0
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 55
+TEST-4 FAIL: new cards in hand are not Treasures
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 0 to 0
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 56
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 57
+TEST-2 FAIL: handCount changed from 5 to 9
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 2 to 2
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 58
+TEST-2 FAIL: handCount changed from 4 to 8
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 4 to 4
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 59
+TEST-2 FAIL: handCount changed from 3 to 5
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 60
+TEST-2 FAIL: handCount changed from 3 to 7
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 1 to 1
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 61
+TEST-2 FAIL: handCount changed from 7 to 9
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 4 to 4
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 62
+TEST-2 FAIL: handCount changed from 2 to 6
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 1 to 1
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 63
+TEST-2 FAIL: handCount changed from 6 to 10
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 5 to 5
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 64
+TEST-2 FAIL: handCount changed from 3 to 5
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 65
+TEST-2 FAIL: handCount changed from 6 to 10
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 66
+TEST-2 FAIL: handCount changed from 6 to 10
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 4 to 4
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 67
+TEST-2 FAIL: handCount changed from 6 to 10
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 2 to 2
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 68
+TEST-4 FAIL: new cards in hand are not Treasures
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 0 to 0
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 69
+TEST-2 FAIL: handCount changed from 2 to 6
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 1 to 1
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 70
+TEST-2 FAIL: handCount changed from 2 to 6
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 71
+TEST-2 FAIL: handCount changed from 3 to 7
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 72
+TEST-2 FAIL: handCount changed from 4 to 8
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 5 to 5
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 73
+TEST-2 FAIL: handCount changed from 1 to 5
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 2 to 2
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 74
+TEST-4 FAIL: new cards in hand are not Treasures
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 1 to 1
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 75
+TEST-2 FAIL: handCount changed from 3 to 5
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 2 to 2
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 76
+TEST-2 FAIL: handCount changed from 1 to 5
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 77
+TEST-4 FAIL: new cards in hand are not Treasures
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 78
+TEST-2 FAIL: handCount changed from 4 to 8
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 2 to 2
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 79
+TEST-2 FAIL: handCount changed from 2 to 4
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 0 to 0
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 80
+TEST-2 FAIL: handCount changed from 5 to 9
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 1 to 1
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 81
+TEST-2 FAIL: handCount changed from 2 to 4
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 2 to 2
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 82
+TEST-2 FAIL: handCount changed from 4 to 8
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 4 to 4
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 83
+TEST-2 FAIL: handCount changed from 3 to 7
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 2 to 2
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 84
+TEST-2 FAIL: handCount changed from 2 to 6
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 1 to 1
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 85
+TEST-4 FAIL: new cards in hand are not Treasures
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 1 to 1
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 86
+TEST-2 FAIL: handCount changed from 4 to 7
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 5 to 5
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 87
+TEST-2 FAIL: handCount changed from 1 to 3
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 1 to 1
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 88
+TEST-2 FAIL: handCount changed from 2 to 4
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 4 to 4
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 89
+TEST-4 FAIL: new cards in hand are not Treasures
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 3 to 3
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 90
+TEST-2 FAIL: handCount changed from 3 to 7
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 2 to 2
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 91
+TEST-2 FAIL: handCount changed from 3 to 6
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 5 to 5
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 92
+TEST-2 FAIL: handCount changed from 5 to 7
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 0 to 0
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 93
+TEST-2 FAIL: handCount changed from 2 to 5
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 5 to 5
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 94
+TEST-2 FAIL: handCount changed from 3 to 6
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 0 to 0
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 95
+TEST-2 FAIL: handCount changed from 2 to 4
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 4 to 4
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 96
+TEST-2 FAIL: handCount changed from 1 to 5
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 4 to 4
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 97
+TEST-2 FAIL: handCount changed from 2 to 6
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 2 to 2
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 98
+TEST-2 FAIL: handCount changed from 5 to 7
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 1 to 1
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 99
+TEST-2 FAIL: handCount changed from 3 to 7
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 4 to 4
+TEST-7 FAIL: last playedCard was not Adventurer
+
+Iteration - 100
+TEST-2 FAIL: handCount changed from 4 to 8
+TEST-5 FAIL: Adventurer is not set to be discarded at end of player's turn
+TEST-6 FAIL: playedCardCount changed from 4 to 4
+TEST-7 FAIL: last playedCard was not Adventurer
+
+---------------- End Adventurer Random Tests ----------------
+
+Function 'playSteward'
+Lines executed:0.00% of 10
+Branches executed:0.00% of 4
+Taken at least once:0.00% of 4
+Calls executed:0.00% of 5
+
+Function 'playSmithy'
+Lines executed:100.00% of 4
+Branches executed:100.00% of 2
+Taken at least once:100.00% of 2
+Calls executed:100.00% of 1
+
+Function 'playFeast'
+Lines executed:0.00% of 15
+Branches executed:0.00% of 10
+Taken at least once:0.00% of 10
+Calls executed:0.00% of 4
+
+Function 'playCouncilRoom'
+Lines executed:0.00% of 9
+Branches executed:0.00% of 6
+Taken at least once:0.00% of 6
+Calls executed:0.00% of 3
+
+Function 'playAdventurer'
+Lines executed:100.00% of 15
+Branches executed:100.00% of 12
+Taken at least once:100.00% of 12
+Calls executed:100.00% of 2
+
+Function 'updateCoins'
+Lines executed:100.00% of 11
+Branches executed:100.00% of 8
+Taken at least once:100.00% of 8
+No calls
+
+Function 'gainCard'
+Lines executed:61.54% of 13
+Branches executed:100.00% of 6
+Taken at least once:50.00% of 6
+Calls executed:100.00% of 1
+
+Function 'discardCard'
+Lines executed:0.00% of 13
+Branches executed:0.00% of 6
+Taken at least once:0.00% of 6
+No calls
+
+Function 'cardEffect'
+Lines executed:7.58% of 198
+Branches executed:13.94% of 165
+Taken at least once:2.42% of 165
+Calls executed:5.77% of 52
+
+Function 'getCost'
+Lines executed:23.33% of 30
+Branches executed:100.00% of 28
+Taken at least once:17.86% of 28
+No calls
+
+Function 'drawCard'
+Lines executed:95.45% of 22
+Branches executed:100.00% of 6
+Taken at least once:83.33% of 6
+Calls executed:100.00% of 1
+
+Function 'getWinners'
+Lines executed:0.00% of 24
+Branches executed:0.00% of 22
+Taken at least once:0.00% of 22
+Calls executed:0.00% of 2
+
+Function 'scoreFor'
+Lines executed:100.00% of 24
+Branches executed:100.00% of 42
+Taken at least once:66.67% of 42
+Calls executed:0.00% of 3
+
+Function 'isGameOver'
+Lines executed:80.00% of 10
+Branches executed:100.00% of 8
+Taken at least once:75.00% of 8
+No calls
+
+Function 'endTurn'
+Lines executed:100.00% of 20
+Branches executed:100.00% of 6
+Taken at least once:100.00% of 6
+Calls executed:100.00% of 3
+
+Function 'whoseTurn'
+Lines executed:100.00% of 2
+No branches
+No calls
+
+Function 'fullDeckCount'
+Lines executed:0.00% of 9
+Branches executed:0.00% of 12
+Taken at least once:0.00% of 12
+No calls
+
+Function 'supplyCount'
+Lines executed:100.00% of 2
+No branches
+No calls
+
+Function 'handCard'
+Lines executed:100.00% of 3
+No branches
+Calls executed:100.00% of 1
+
+Function 'numHandCards'
+Lines executed:100.00% of 2
+No branches
+Calls executed:100.00% of 1
+
+Function 'buyCard'
+Lines executed:76.92% of 13
+Branches executed:100.00% of 6
+Taken at least once:50.00% of 6
+Calls executed:100.00% of 4
+
+Function 'playCard'
+Lines executed:78.57% of 14
+Branches executed:100.00% of 10
+Taken at least once:60.00% of 10
+Calls executed:100.00% of 3
+
+Function 'shuffle'
+Lines executed:100.00% of 16
+Branches executed:100.00% of 8
+Taken at least once:100.00% of 8
+Calls executed:100.00% of 2
+
+Function 'initializeGame'
+Lines executed:83.87% of 62
+Branches executed:95.65% of 46
+Taken at least once:78.26% of 46
+Calls executed:100.00% of 5
+
+Function 'kingdomCards'
+Lines executed:0.00% of 13
+No branches
+No calls
+
+Function 'newGame'
+Lines executed:0.00% of 3
+No branches
+No calls
+
+Function 'compare'
+Lines executed:100.00% of 6
+Branches executed:100.00% of 4
+Taken at least once:100.00% of 4
+No calls
+
+File 'dominion.c'
+Lines executed:42.10% of 563
+Branches executed:51.08% of 417
+Taken at least once:32.61% of 417
+Calls executed:29.03% of 93
+Creating 'dominion.c.gcov'
+
